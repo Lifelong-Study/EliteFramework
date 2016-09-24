@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		D87C9D901D053F2B00EFBA8F /* Target-Release */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = D87C9D911D053F2B00EFBA8F /* Build configuration list for PBXAggregateTarget "Target-Release" */;
+			buildPhases = (
+				D87C9D941D053F4300EFBA8F /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "Target-Release";
+			productName = "Target-Release";
+		};
+		D8E9DC931C23055B00764801 /* Target-Simulator */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = D8E9DC941C23055B00764801 /* Build configuration list for PBXAggregateTarget "Target-Simulator" */;
+			buildPhases = (
+				D8E9DC971C23056000764801 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "Target-Simulator";
+			productName = Target;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		D812AA7B1C734C9D003A6C28 /* EliteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D812AA7A1C734C9D003A6C28 /* EliteViewController.swift */; };
+		D81B56B31CF8C0020044E6DF /* EliteLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81B56B21CF8C0020044E6DF /* EliteLayoutConstraint.swift */; };
+		D83C26291C712036000FC007 /* EliteString.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83C26281C712036000FC007 /* EliteString.swift */; };
+		D867BF6C1C70BAB40023B6E2 /* EliteColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E9DC911C2301A700764801 /* EliteColor.swift */; };
+		D867BF6D1C70BAB40023B6E2 /* EliteLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D867BF5A1C70A3AB0023B6E2 /* EliteLayer.swift */; };
+		D867BF731C70D9F10023B6E2 /* EliteDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D867BF721C70D9F10023B6E2 /* EliteDevice.swift */; };
+		D87963CB1C85D75A00F8ADB7 /* EliteAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87963CA1C85D75A00F8ADB7 /* EliteAttributedString.swift */; };
+		D88FA4981C86315C00C02B3E /* EliteDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FA4971C86315C00C02B3E /* EliteDate.swift */; };
+		D88FA49A1C863CF900C02B3E /* EliteArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FA4991C863CF900C02B3E /* EliteArray.swift */; };
+		D88FA49C1C863DF500C02B3E /* EliteMutableArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FA49B1C863DF500C02B3E /* EliteMutableArray.swift */; };
+		D891AFA51C90290E004BC0AA /* EliteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D891AFA41C90290E004BC0AA /* EliteImage.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D812AA7A1C734C9D003A6C28 /* EliteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EliteViewController.swift; sourceTree = "<group>"; };
+		D81B56B21CF8C0020044E6DF /* EliteLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EliteLayoutConstraint.swift; sourceTree = "<group>"; };
+		D83C26281C712036000FC007 /* EliteString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EliteString.swift; sourceTree = "<group>"; };
+		D867BF5A1C70A3AB0023B6E2 /* EliteLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EliteLayer.swift; sourceTree = "<group>"; };
+		D867BF721C70D9F10023B6E2 /* EliteDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EliteDevice.swift; sourceTree = "<group>"; };
+		D87963CA1C85D75A00F8ADB7 /* EliteAttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EliteAttributedString.swift; sourceTree = "<group>"; };
+		D88FA4971C86315C00C02B3E /* EliteDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EliteDate.swift; sourceTree = "<group>"; };
+		D88FA4991C863CF900C02B3E /* EliteArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EliteArray.swift; sourceTree = "<group>"; };
+		D88FA49B1C863DF500C02B3E /* EliteMutableArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EliteMutableArray.swift; sourceTree = "<group>"; };
+		D891AFA41C90290E004BC0AA /* EliteImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EliteImage.swift; sourceTree = "<group>"; };
+		D8E9DC811C23015F00764801 /* EliteFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EliteFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8E9DC841C23015F00764801 /* EliteFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EliteFramework.h; sourceTree = "<group>"; };
+		D8E9DC861C23015F00764801 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8E9DC911C2301A700764801 /* EliteColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EliteColor.swift; path = EliteFramework/EliteColor.swift; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D8E9DC7D1C23015F00764801 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D8E9DC771C23015F00764801 = {
+			isa = PBXGroup;
+			children = (
+				D8E9DC831C23015F00764801 /* EliteFramework */,
+				D8E9DC821C23015F00764801 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D8E9DC821C23015F00764801 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8E9DC811C23015F00764801 /* EliteFramework.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D8E9DC831C23015F00764801 /* EliteFramework */ = {
+			isa = PBXGroup;
+			children = (
+				D8E9DC841C23015F00764801 /* EliteFramework.h */,
+				D8E9DC911C2301A700764801 /* EliteColor.swift */,
+				D867BF5A1C70A3AB0023B6E2 /* EliteLayer.swift */,
+				D867BF721C70D9F10023B6E2 /* EliteDevice.swift */,
+				D83C26281C712036000FC007 /* EliteString.swift */,
+				D812AA7A1C734C9D003A6C28 /* EliteViewController.swift */,
+				D87963CA1C85D75A00F8ADB7 /* EliteAttributedString.swift */,
+				D88FA4971C86315C00C02B3E /* EliteDate.swift */,
+				D88FA4991C863CF900C02B3E /* EliteArray.swift */,
+				D88FA49B1C863DF500C02B3E /* EliteMutableArray.swift */,
+				D891AFA41C90290E004BC0AA /* EliteImage.swift */,
+				D81B56B21CF8C0020044E6DF /* EliteLayoutConstraint.swift */,
+				D8E9DC861C23015F00764801 /* Info.plist */,
+			);
+			path = EliteFramework;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D8E9DC7E1C23015F00764801 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D8E9DC801C23015F00764801 /* EliteFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8E9DC891C23015F00764801 /* Build configuration list for PBXNativeTarget "EliteFramework" */;
+			buildPhases = (
+				D8E9DC7C1C23015F00764801 /* Sources */,
+				D8E9DC7D1C23015F00764801 /* Frameworks */,
+				D8E9DC7E1C23015F00764801 /* Headers */,
+				D8E9DC7F1C23015F00764801 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EliteFramework;
+			productName = EliteFramework;
+			productReference = D8E9DC811C23015F00764801 /* EliteFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D8E9DC781C23015F00764801 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Lifelong-Study";
+				TargetAttributes = {
+					D87C9D901D053F2B00EFBA8F = {
+						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
+					};
+					D8E9DC801C23015F00764801 = {
+						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
+					};
+					D8E9DC931C23055B00764801 = {
+						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
+					};
+				};
+			};
+			buildConfigurationList = D8E9DC7B1C23015F00764801 /* Build configuration list for PBXProject "EliteFramework" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D8E9DC771C23015F00764801;
+			productRefGroup = D8E9DC821C23015F00764801 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D8E9DC801C23015F00764801 /* EliteFramework */,
+				D8E9DC931C23055B00764801 /* Target-Simulator */,
+				D87C9D901D053F2B00EFBA8F /* Target-Release */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D8E9DC7F1C23015F00764801 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D87C9D941D053F4300EFBA8F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n\nFRAMEWORK_NAME=${PROJECT_NAME}.framework\n\n# Install dir will be the final output to the framework.\n# The following line create it in the root folder of the current project.\nINSTALL_DIR=${SRCROOT}/Products\n\n# make sure the output directory exists\nmkdir -p \"${INSTALL_DIR}\"\n\n# Step 1. Build Device and Simulator versions\nxcodebuild -target \"${PROJECT_NAME}\" ONLY_ACTIVE_ARCH=NO -configuration \"Release\" -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n\n# Step 2. Copy the framework structure (from iphoneos build) to the products folder\ncp -R \"${BUILD_DIR}/Release-iphoneos/${FRAMEWORK_NAME}\" \"${INSTALL_DIR}\"\n\n# Step 3. Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${INSTALL_DIR}/${FRAMEWORK_NAME}/${PROJECT_NAME}\" \"${BUILD_DIR}/Release-iphoneos/${FRAMEWORK_NAME}/${PROJECT_NAME}\"\n\n# Step 4. Convenience step to remove the build temp folder\nrm -r \"build\"\n\n# Step 5. Convenience step to open the products directory in Finder\nopen \"${INSTALL_DIR}/${FRAMEWORK_NAME}\"";
+		};
+		D8E9DC971C23056000764801 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n\nFRAMEWORK_NAME=${PROJECT_NAME}.framework\n\n# Install dir will be the final output to the framework.\n# The following line create it in the root folder of the current project.\nINSTALL_DIR=${SRCROOT}/Products\n\n# make sure the output directory exists\nmkdir -p \"${INSTALL_DIR}\"\n\n# Step 1. Build Device and Simulator versions\nxcodebuild -target \"${PROJECT_NAME}\" ONLY_ACTIVE_ARCH=NO -configuration \"Release\" -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\nxcodebuild -target \"${PROJECT_NAME}\" -configuration \"Release\" -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n\n# Step 2. Copy the framework structure (from iphoneos build) to the products folder\ncp -R \"${BUILD_DIR}/Release-iphoneos/${FRAMEWORK_NAME}\" \"${INSTALL_DIR}\"\n\n# Step 3. Copy Swift modules from iphonesimulator build to the copied framework directory\nSIMULATOR_SWIFT_MODULES_DIR=\"${BUILD_DIR}/Release-iphonesimulator/${FRAMEWORK_NAME}/Modules/${PROJECT_NAME}.swiftmodule/.\"\ncp -R \"${SIMULATOR_SWIFT_MODULES_DIR}\" \"${INSTALL_DIR}/${FRAMEWORK_NAME}/Modules/${PROJECT_NAME}.swiftmodule\"\n\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${INSTALL_DIR}/${FRAMEWORK_NAME}/${PROJECT_NAME}\" \"${BUILD_DIR}/Release-iphonesimulator/${FRAMEWORK_NAME}/${PROJECT_NAME}\" \"${BUILD_DIR}/Release-iphoneos/${FRAMEWORK_NAME}/${PROJECT_NAME}\"\n\n# Step 5. Convenience step to remove the build temp folder\nrm -r \"build\"\n\n# Step 6. Convenience step to open the products directory in Finder\nopen \"${INSTALL_DIR}/${FRAMEWORK_NAME}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D8E9DC7C1C23015F00764801 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D88FA49C1C863DF500C02B3E /* EliteMutableArray.swift in Sources */,
+				D87963CB1C85D75A00F8ADB7 /* EliteAttributedString.swift in Sources */,
+				D867BF6C1C70BAB40023B6E2 /* EliteColor.swift in Sources */,
+				D867BF731C70D9F10023B6E2 /* EliteDevice.swift in Sources */,
+				D88FA4981C86315C00C02B3E /* EliteDate.swift in Sources */,
+				D81B56B31CF8C0020044E6DF /* EliteLayoutConstraint.swift in Sources */,
+				D83C26291C712036000FC007 /* EliteString.swift in Sources */,
+				D88FA49A1C863CF900C02B3E /* EliteArray.swift in Sources */,
+				D891AFA51C90290E004BC0AA /* EliteImage.swift in Sources */,
+				D812AA7B1C734C9D003A6C28 /* EliteViewController.swift in Sources */,
+				D867BF6D1C70BAB40023B6E2 /* EliteLayer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D87C9D921D053F2B00EFBA8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
+			};
+			name = Debug;
+		};
+		D87C9D931D053F2B00EFBA8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
+			};
+			name = Release;
+		};
+		D8E9DC871C23015F00764801 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D8E9DC881C23015F00764801 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D8E9DC8A1C23015F00764801 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = EliteFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.songhua.Framework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D8E9DC8B1C23015F00764801 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = EliteFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.songhua.Framework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D8E9DC951C23055B00764801 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
+			};
+			name = Debug;
+		};
+		D8E9DC961C23055B00764801 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D87C9D911D053F2B00EFBA8F /* Build configuration list for PBXAggregateTarget "Target-Release" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D87C9D921D053F2B00EFBA8F /* Debug */,
+				D87C9D931D053F2B00EFBA8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8E9DC7B1C23015F00764801 /* Build configuration list for PBXProject "EliteFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8E9DC871C23015F00764801 /* Debug */,
+				D8E9DC881C23015F00764801 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8E9DC891C23015F00764801 /* Build configuration list for PBXNativeTarget "EliteFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8E9DC8A1C23015F00764801 /* Debug */,
+				D8E9DC8B1C23015F00764801 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8E9DC941C23055B00764801 /* Build configuration list for PBXAggregateTarget "Target-Simulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8E9DC951C23055B00764801 /* Debug */,
+				D8E9DC961C23055B00764801 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D8E9DC781C23015F00764801 /* Project object */;
+}
