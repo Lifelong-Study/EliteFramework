@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIImage {
     
-    func maskImage(ige: UIImage, maskImage: UIImage) -> UIImage? {
+    func maskImage(_ ige: UIImage, maskImage: UIImage) -> UIImage? {
         
 //        let maskRef = maskImage.CGImage
 //        
@@ -27,27 +27,27 @@ public extension UIImage {
         return nil
     }
     
-    func radians(degrees: Double) -> CGFloat {
+    func radians(_ degrees: Double) -> CGFloat {
         return CGFloat(degrees * M_PI / 180.0)
     }
     
     /*! 影像剪裁 */
-    func trimImageWithMask(maskFrame: CGRect) -> UIImage? {
+    func trimImageWithMask(_ maskFrame: CGRect) -> UIImage? {
     
-        let imageRef = CGImageCreateWithImageInRect(self.CGImage!, maskFrame)
+        let imageRef = self.cgImage!.cropping(to: maskFrame)
         
         if imageRef != nil {
-            return UIImage(CGImage: imageRef!)
+            return UIImage(cgImage: imageRef!)
         }
         
         return nil
     }
     
     //!
-    func scaleToSize(size size: CGSize) -> UIImage {
+    func scaleToSize(size: CGSize) -> UIImage {
         UIGraphicsBeginImageContext(size);
         
-        drawInRect(CGRectMake(0.0, 0.0, size.width, size.height))
+        draw(in: CGRect(x: 0.0, y: 0.0, width: size.width, height: size.height))
         
         let image = UIGraphicsGetImageFromCurrentImageContext();
         
@@ -57,7 +57,7 @@ public extension UIImage {
     }
     
     //!
-    func compress(maxWidth maxWidth: Double, maxHeight: Double, quality: Double) -> UIImage? {
+    func compress(maxWidth: Double, maxHeight: Double, quality: Double) -> UIImage? {
         
         var actualWidth  = Double(self.size.width)
         var actualHeight = Double(self.size.height)
@@ -84,9 +84,9 @@ public extension UIImage {
         }
         
         
-        let rect = CGRectMake(0.0, 0.0, CGFloat(actualWidth), CGFloat(actualHeight))
+        let rect = CGRect(x: 0.0, y: 0.0, width: CGFloat(actualWidth), height: CGFloat(actualHeight))
         UIGraphicsBeginImageContext(rect.size)
-        drawInRect(rect)
+        draw(in: rect)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         let imageData = UIImageJPEGRepresentation(image!, CGFloat(quality))
         UIGraphicsEndImageContext()
@@ -96,9 +96,9 @@ public extension UIImage {
     }
     
     //!
-    func rotate(orientation orientation: UIImageOrientation) -> UIImage? {
+    func rotate(orientation: UIImageOrientation) -> UIImage? {
         
-        if orientation != .Right && orientation != .Left {
+        if orientation != .right && orientation != .left {
             return self
         }
         
@@ -107,13 +107,13 @@ public extension UIImage {
         let context = UIGraphicsGetCurrentContext()
         
         if false {
-        } else if orientation == .Right {
-            CGContextRotateCTM(context!, radians(90))
-        } else if orientation == .Left {
-            CGContextRotateCTM(context!, radians(-90))
+        } else if orientation == .right {
+            context!.rotate(by: radians(90))
+        } else if orientation == .left {
+            context!.rotate(by: radians(-90))
         }
         
-        drawAtPoint(CGPointMake(0, 0))
+        draw(at: CGPoint(x: 0, y: 0))
         
         let image = UIGraphicsGetImageFromCurrentImageContext()
         

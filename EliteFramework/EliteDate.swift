@@ -8,99 +8,99 @@
 
 import UIKit
 
-public extension NSDate {
+public extension Date {
     
-    public var dateByZeroSecond: NSDate {
+    public var dateByZeroSecond: Date {
         return self
     }
     
-    public func dateByZeroSecond(date: NSDate) -> NSDate {
-        let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
+    public func dateByZeroSecond(date: Date) -> Date {
+        var calendar = Calendar(identifier: Calendar.Identifier.gregorian)
         
-        calendar?.timeZone = .systemTimeZone()
+        calendar.timeZone = .current
         
-        let components = calendar?.components([.Year, .Month, .Day], fromDate: date)
+        let components = (calendar as NSCalendar).components([.year, .month, .day], from: date)
         
-        let dateFormatter = NSDateFormatter()
+        let dateFormatter = DateFormatter()
         
         dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss.SSS"
         
-        let dateString = String(format: "%04d-%02d-%02d 00:00:00.0000", components!.year, components!.month, components!.day)
+        let dateString = String(format: "%04d-%02d-%02d 00:00:00.0000", components.year!, components.month!, components.day!)
         
-        return dateFormatter.dateFromString(dateString)!
+        return dateFormatter.date(from: dateString)!
     }
     
-    public func cleanNanosecond() -> NSDate {
+    public func cleanNanosecond() -> Date {
         
-        let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
+        let calendar = Calendar(identifier: Calendar.Identifier.gregorian)
         
-        let components = calendar?.components([.Year, .Month, .Day, .Hour, .Minute, .Second], fromDate: self)
+        var components = (calendar as NSCalendar?)?.components([.year, .month, .day, .hour, .minute, .second], from: self)
         
         components?.nanosecond = 0
         
-        return calendar?.dateFromComponents(components!) as NSDate!
+        return calendar.date(from: components!) as Date!
     }
     
     public func stringFromFormat(format: String) -> String? {
-        let dateFormatter = NSDateFormatter()
+        let dateFormatter = DateFormatter()
         
         dateFormatter.dateFormat = format
         
-        return dateFormatter.stringFromDate(self)
+        return dateFormatter.string(from: self)
     }
     
-    var firstDayByTheYear: NSDate? {
-        let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
+    var firstDayByTheYear: Date? {
+        let calendar = Calendar(identifier: Calendar.Identifier.gregorian)
         
-        let components = calendar?.components([.Year, .Hour, .Minute, .Second], fromDate: self)
+        var components = (calendar as NSCalendar?)?.components([.year, .hour, .minute, .second], from: self)
         
         components?.month = 1
         components?.day = 1
         components?.nanosecond = 0
         
-        return calendar?.dateFromComponents(components!)
+        return calendar.date(from: components!)
     }
     
-    var firstDayByTheMonth: NSDate? {
-        let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
+    var firstDayByTheMonth: Date? {
+        let calendar = Calendar(identifier: Calendar.Identifier.gregorian)
         
-        let components = calendar?.components([.Year, .Month, .Hour, .Minute, .Second], fromDate: self)
+        var components = (calendar as NSCalendar?)?.components([.year, .month, .hour, .minute, .second], from: self)
         
         components?.day = 1
         
-        return calendar?.dateFromComponents(components!)
+        return calendar.date(from: components!)
     }
     
-    var lastDayByTheMonth: NSDate? {
-        return self.dateByAddingTimeInterval(Double(daysInTheMonth!) * 24 * 60 * 60)
+    var lastDayByTheMonth: Date? {
+        return self.addingTimeInterval(Double(daysInTheMonth!) * 24 * 60 * 60)
     }
     
     var daysInTheMonth: Int? {
-        let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
+        let calendar = Calendar(identifier: Calendar.Identifier.gregorian)
         
-        return calendar?.rangeOfUnit(.Day, inUnit: .Month, forDate: self).length
+        return (calendar as NSCalendar?)?.range(of: .day, in: .month, for: self).length
     }
     
-    func calendar() -> NSCalendar? {
-        return NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
+    func calendar() -> Calendar? {
+        return Calendar(identifier: Calendar.Identifier.gregorian)
     }
     
-    var year:   Int? { return calendar()?.components([.Year],   fromDate: self).day    }
-    var month:  Int? { return calendar()?.components([.Month],  fromDate: self).month  }
-    var day:    Int? { return calendar()?.components([.Day],    fromDate: self).day    }
-    var hour:   Int? { return calendar()?.components([.Hour],   fromDate: self).hour   }
-    var minute: Int? { return calendar()?.components([.Minute], fromDate: self).minute }
-    var second: Int? { return calendar()?.components([.Second], fromDate: self).second }
+    var year:   Int? { return (calendar() as NSCalendar?)?.components([.year],   from: self).day    }
+    var month:  Int? { return (calendar() as NSCalendar?)?.components([.month],  from: self).month  }
+    var day:    Int? { return (calendar() as NSCalendar?)?.components([.day],    from: self).day    }
+    var hour:   Int? { return (calendar() as NSCalendar?)?.components([.hour],   from: self).hour   }
+    var minute: Int? { return (calendar() as NSCalendar?)?.components([.minute], from: self).minute }
+    var second: Int? { return (calendar() as NSCalendar?)?.components([.second], from: self).second }
     
     var shortweek: String? {
-        let dateFormatter = NSDateFormatter()
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEE"
-        return dateFormatter.stringFromDate(self)
+        return dateFormatter.string(from: self)
     }
     
     var longweek: String? {
-        let dateFormatter = NSDateFormatter()
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE"
-        return dateFormatter.stringFromDate(self)
+        return dateFormatter.string(from: self)
     }
 }

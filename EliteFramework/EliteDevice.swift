@@ -11,7 +11,7 @@ import UIKit
 
 public enum MachineName {
     // Unknown Device
-    case Unknown_Device
+    case unknown_Device
     
     // iPhone
     case iPhone_1
@@ -60,7 +60,7 @@ public extension UIDevice {
 //    let swf: MachineName!
     
     public class func machineName() -> MachineName {
-        let screenSize = UIScreen.mainScreen().bounds.size
+        let screenSize = UIScreen.main.bounds.size
         
         
         if false {
@@ -77,7 +77,7 @@ public extension UIDevice {
         }
     }
     
-    private static var _model: MachineName? = nil
+    fileprivate static var _model: MachineName? = nil
     
     public class var model: MachineName? {
     
@@ -146,12 +146,12 @@ public extension UIDevice {
             
             // Simulator
             case "i386":        if false {
-                                } else if UI_USER_INTERFACE_IDIOM() == .Phone {     UIDevice._model = .iPhone_Simulator
-                                } else if UI_USER_INTERFACE_IDIOM() == .Pad   {     UIDevice._model = .iPad_Simulator
+                                } else if UI_USER_INTERFACE_IDIOM() == .phone {     UIDevice._model = .iPhone_Simulator
+                                } else if UI_USER_INTERFACE_IDIOM() == .pad   {     UIDevice._model = .iPad_Simulator
                                 }
             
             //
-            default:            UIDevice._model = .Unknown_Device
+            default:            UIDevice._model = .unknown_Device
         }
         
         return UIDevice._model
@@ -166,7 +166,7 @@ public extension UIDevice {
         let machineMirror = Mirror(reflecting: systemInfo.machine)
         
         let identifier = machineMirror.children.reduce("") { identifier, element in
-            guard let value = element.value as? Int8 where value != 0 else { return identifier }
+            guard let value = element.value as? Int8 , value != 0 else { return identifier }
             
             return identifier + String(UnicodeScalar(UInt8(value)))
         }

@@ -23,25 +23,25 @@ public extension String {
         }
     }
     
-    func heightWithConstrainedWidth(width: CGFloat, font: UIFont) -> CGFloat {
-        let constraintRect = CGSize(width: width, height: CGFloat.max)
+    func heightWithConstrainedWidth(_ width: CGFloat, font: UIFont) -> CGFloat {
+        let constraintRect = CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)
         
-        let boundingBox = self.boundingRectWithSize(constraintRect, options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
+        let boundingBox = self.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
         
         return boundingBox.height
     }
     
-    func dateWithFormat(format: String) -> NSDate? {
-        let dateFormatter = NSDateFormatter()
+    func dateWithFormat(_ format: String) -> Date? {
+        let dateFormatter = DateFormatter()
         
         dateFormatter.dateFormat = format
         
-        return dateFormatter.dateFromString(self)
+        return dateFormatter.date(from: self)
     }
 }
 
 public extension NSInteger {
-    var stringValue: String { return NSNumber(integer: self).stringValue }
+    var stringValue: String { return NSNumber(value: self as Int).stringValue }
 }
 
 public extension Float {
@@ -52,24 +52,24 @@ public extension Float {
         if isZero { print("s3") }
         if isFinite { print("s4") }
         
-        return isNaN || isNormal ? "" : NSNumber(float: self).stringValue
+        return isNaN || isNormal ? "" : NSNumber(value: self as Float).stringValue
     }
 }
 
 public extension Double {
-    var stringValue: String { return isNaN || isNormal ? "" : NSNumber(double: self).stringValue }
+    var stringValue: String { return isNaN || isNormal ? "" : NSNumber(value: self as Double).stringValue }
     
-    public func stringValue(fractionDigits: NSInteger) -> String {
+    public func stringValue(_ fractionDigits: NSInteger) -> String {
         
-        let numberFormatter = NSNumberFormatter()
+        let numberFormatter = NumberFormatter()
         numberFormatter.maximumFractionDigits = fractionDigits
         
-        return numberFormatter.stringFromNumber(NSNumber(double: self))!
+        return numberFormatter.string(from: NSNumber(value: self as Double))!
     }
 }
 
-public extension NSUserDefaults {
-    public func ss(ssa: Double, key: String) {
+public extension UserDefaults {
+    public func ss(_ ssa: Double, key: String) {
     
     }
     

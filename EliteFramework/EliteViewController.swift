@@ -7,23 +7,43 @@
 //
 
 import UIKit
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+fileprivate func <= <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l <= r
+  default:
+    return !(rhs < lhs)
+  }
+}
+
 
 public extension UIViewController {
 
     // 過場動畫
     public enum TransferAnimation {
-        case Push
-        case Present
-        case Fade
+        case push
+        case present
+        case fade
     }
     
     // MARK:
-    public func transferViewController(identifier: String?, animation: TransferAnimation) {
+    public func transferViewController(_ identifier: String?, animation: TransferAnimation) {
         return transferViewController(storyboard: storyboard!, identifier: identifier, animation: animation)
     }
     
     // MARK:
-    public func transferViewController(storyboard storyboard: String?, identifier: String?, animation: TransferAnimation) {
+    public func transferViewController(storyboard: String?, identifier: String?, animation: TransferAnimation) {
         
         if storyboard == nil {
             return ;
@@ -35,36 +55,36 @@ public extension UIViewController {
     }
     
     // MARK:
-    public func transferViewController(storyboard storyboard: UIStoryboard?, identifier: String?, animation: TransferAnimation) {
+    public func transferViewController(storyboard: UIStoryboard?, identifier: String?, animation: TransferAnimation) {
         
         // 防呆
         if storyboard == nil || identifier == nil || identifier?.length <= 0 {
             return
         }
         
-        let tatgetViewController = storyboard!.instantiateViewControllerWithIdentifier(identifier!)
+        let tatgetViewController = storyboard!.instantiateViewController(withIdentifier: identifier!)
         
         let transition = CATransition()
         
         //
         switch animation {
-        case .Push:
-            dispatch_async(dispatch_get_main_queue()) {
+        case .push:
+            DispatchQueue.main.async {
                 self.navigationController?.pushViewController(tatgetViewController, animated: true)
             }
-        case .Present:
-            dispatch_async(dispatch_get_main_queue()) {
-                self.navigationController?.presentViewController(tatgetViewController, animated: false, completion: nil)
+        case .present:
+            DispatchQueue.main.async {
+                self.navigationController?.present(tatgetViewController, animated: false, completion: nil)
             }
-        case .Fade:
+        case .fade:
             transition.type = kCATransitionFade
             transition.duration = 0.2
             transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
             
-            view.window?.layer.addAnimation(transition, forKey: nil)
+            view.window?.layer.add(transition, forKey: nil)
             
-            dispatch_async(dispatch_get_main_queue()) {
-                self.presentViewController(tatgetViewController, animated: false, completion: nil)
+            DispatchQueue.main.async {
+                self.present(tatgetViewController, animated: false, completion: nil)
             }
         }
     }
@@ -74,10 +94,10 @@ public extension UIViewController {
         
         let imagePickerController = UIImagePickerController()
         
-        imagePickerController.sourceType = .Camera
+        imagePickerController.sourceType = .camera
         
-        dispatch_async(dispatch_get_main_queue()) {
-            self.view.window?.rootViewController?.presentViewController(imagePickerController, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            self.view.window?.rootViewController?.present(imagePickerController, animated: true, completion: nil)
         }
         
         return imagePickerController
@@ -88,28 +108,28 @@ public extension UIViewController {
         
         let imagePickerController = UIImagePickerController()
         
-        imagePickerController.sourceType = .PhotoLibrary
+        imagePickerController.sourceType = .photoLibrary
         
-        dispatch_async(dispatch_get_main_queue()) {
-            self.presentViewController(imagePickerController, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            self.present(imagePickerController, animated: true, completion: nil)
         }
         
         return imagePickerController
     }
     
     // MARK:
-    public func alertView(title title: String?, button: String?) {
+    public func alertView(title: String?, button: String?) {
         alertView(title: title, message: nil, button: button)
     }
     
     // MARK:
-    public func alertView(title title: String?, message: String?, button: String?) {
+    public func alertView(title: String?, message: String?, button: String?) {
         
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        alertController.addAction(UIAlertAction(title: button, style: .Default, handler: nil))
+        alertController.addAction(UIAlertAction(title: button, style: .default, handler: nil))
         
-        presentViewController(alertController, animated: true, completion: nil)
+        present(alertController, animated: true, completion: nil)
     }
 }
 

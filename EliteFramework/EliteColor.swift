@@ -26,7 +26,7 @@ public extension UIColor {
 }
 
 public func blackColor2() -> UIColor {
-    return UIColor.blackColor()
+    return UIColor.black
 }
 
-public let blackColor: UIColor = UIColor.blackColor()
+public let blackColor: UIColor = UIColor.black

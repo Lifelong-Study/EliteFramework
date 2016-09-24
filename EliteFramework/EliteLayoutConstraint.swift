@@ -11,7 +11,7 @@ import UIKit
 public extension NSLayoutConstraint {
     
     //!
-    public class func constraintsWithVisualFormat(format: String, views: [String : AnyObject]) -> [NSLayoutConstraint] {
-        return constraintsWithVisualFormat(format, options: .DirectionLeadingToTrailing, metrics: nil, views: views)
+    public class func constraintsWithVisualFormat(_ format: String, views: [String : AnyObject]) -> [NSLayoutConstraint] {
+        return constraints(withVisualFormat: format, options: NSLayoutFormatOptions(), metrics: nil, views: views)
     }
 }

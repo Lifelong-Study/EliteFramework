@@ -9,14 +9,14 @@
 import UIKit
 
 public enum EliteDirection {
-    case FromTopToBottom  // Top    -> Bottom
-    case FromBottomToTop  // Bottom -> Top
-    case FromLeftToRight  // Left   -> Right
-    case FromRightToLeft  // Right  -> Left
+    case fromTopToBottom  // Top    -> Bottom
+    case fromBottomToTop  // Bottom -> Top
+    case fromLeftToRight  // Left   -> Right
+    case fromRightToLeft  // Right  -> Left
 }
 
 public extension CALayer {
-    public func renderGradientEffectsWithDirection(direction: EliteDirection, cgcolorsArray: Array<CGColor>) {
+    public func renderGradientEffectsWithDirection(_ direction: EliteDirection, cgcolorsArray: Array<CGColor>) {
         
         // 初始化漸層效果
         let gradientLayer = CAGradientLayer()
@@ -31,25 +31,25 @@ public extension CALayer {
             print("replaceSublayer")
             replaceSublayer(sublayers![0], with: gradientLayer)
         } else {
-            insertSublayer(gradientLayer, atIndex: 0)
+            insertSublayer(gradientLayer, at: 0)
         }
     }
     
-    func getStartPointWithDirection(direction: EliteDirection) -> CGPoint {
+    func getStartPointWithDirection(_ direction: EliteDirection) -> CGPoint {
         switch (direction) {
-            case .FromTopToBottom:      return CGPointMake(0.5, 0)
-            case .FromBottomToTop:      return CGPointMake(0.5, 1)
-            case .FromLeftToRight:      return CGPointMake(0, 0.5)
-            case .FromRightToLeft:      return CGPointMake(1, 0.5)
+            case .fromTopToBottom:      return CGPoint(x: 0.5, y: 0)
+            case .fromBottomToTop:      return CGPoint(x: 0.5, y: 1)
+            case .fromLeftToRight:      return CGPoint(x: 0, y: 0.5)
+            case .fromRightToLeft:      return CGPoint(x: 1, y: 0.5)
         }
     }
     
-    func getEndPointWithDirection(direction: EliteDirection) -> CGPoint {
+    func getEndPointWithDirection(_ direction: EliteDirection) -> CGPoint {
         switch (direction) {
-            case .FromTopToBottom:      return CGPointMake(0.5, 1)
-            case .FromBottomToTop:      return CGPointMake(0.5, 0)
-            case .FromLeftToRight:      return CGPointMake(1, 0.5)
-            case .FromRightToLeft:      return CGPointMake(0, 0.5)
+            case .fromTopToBottom:      return CGPoint(x: 0.5, y: 1)
+            case .fromBottomToTop:      return CGPoint(x: 0.5, y: 0)
+            case .fromLeftToRight:      return CGPoint(x: 1, y: 0.5)
+            case .fromRightToLeft:      return CGPoint(x: 0, y: 0.5)
         }
     }
 }

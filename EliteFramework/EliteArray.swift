@@ -10,13 +10,13 @@ import UIKit
 
 public extension NSArray {
     
-    public func sortedArrayUsingKey(key: String?, ascending: Bool) -> NSArray {
-        
-        let sortDescriptor = NSSortDescriptor(key: key, ascending: ascending)
-        
-        let array = NSArray(object: sortDescriptor)
-        
-        return array.sortedArrayUsingDescriptors([sortDescriptor])
-    }
+//    public func sortedArrayUsingKey(key: String?, ascending: Bool) -> NSArray {
+//        
+//        let sortDescriptor = NSSortDescriptor(key: key, ascending: ascending)
+//        
+//        let array = NSArray(object: sortDescriptor)
+//        
+//        return array.sortedArrayUsingDescriptors([sortDescriptor])
+//    }
 }
 

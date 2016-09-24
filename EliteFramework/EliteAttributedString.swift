@@ -10,17 +10,17 @@ import UIKit
 
 public extension NSAttributedString {
     
-    func heightWithConstrainedWidth(width: CGFloat) -> CGFloat {
-        let constraintRect = CGSize(width: width, height: CGFloat.max)
-        let boundingBox = self.boundingRectWithSize(constraintRect, options: NSStringDrawingOptions.UsesLineFragmentOrigin, context: nil)
+    func heightWithConstrainedWidth(_ width: CGFloat) -> CGFloat {
+        let constraintRect = CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)
+        let boundingBox = self.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, context: nil)
         
         return ceil(boundingBox.height)
     }
     
-    func widthWithConstrainedHeight(height: CGFloat) -> CGFloat {
-        let constraintRect = CGSize(width: CGFloat.max, height: height)
+    func widthWithConstrainedHeight(_ height: CGFloat) -> CGFloat {
+        let constraintRect = CGSize(width: CGFloat.greatestFiniteMagnitude, height: height)
         
-        let boundingBox = self.boundingRectWithSize(constraintRect, options: NSStringDrawingOptions.UsesLineFragmentOrigin, context: nil)
+        let boundingBox = self.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, context: nil)
         
         return ceil(boundingBox.width)
     }
