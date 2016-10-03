@@ -34,6 +34,7 @@
 /* Begin PBXBuildFile section */
 		D812AA7B1C734C9D003A6C28 /* EliteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D812AA7A1C734C9D003A6C28 /* EliteViewController.swift */; };
 		D81B56B31CF8C0020044E6DF /* EliteLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81B56B21CF8C0020044E6DF /* EliteLayoutConstraint.swift */; };
+		D83354CC1DA260C7006D756F /* EliteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83354CB1DA260C7006D756F /* EliteView.swift */; };
 		D83C26291C712036000FC007 /* EliteString.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83C26281C712036000FC007 /* EliteString.swift */; };
 		D867BF6C1C70BAB40023B6E2 /* EliteColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E9DC911C2301A700764801 /* EliteColor.swift */; };
 		D867BF6D1C70BAB40023B6E2 /* EliteLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D867BF5A1C70A3AB0023B6E2 /* EliteLayer.swift */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		D812AA7A1C734C9D003A6C28 /* EliteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EliteViewController.swift; sourceTree = "<group>"; };
 		D81B56B21CF8C0020044E6DF /* EliteLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EliteLayoutConstraint.swift; sourceTree = "<group>"; };
+		D83354CB1DA260C7006D756F /* EliteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EliteView.swift; sourceTree = "<group>"; };
 		D83C26281C712036000FC007 /* EliteString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EliteString.swift; sourceTree = "<group>"; };
 		D867BF5A1C70A3AB0023B6E2 /* EliteLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EliteLayer.swift; sourceTree = "<group>"; };
 		D867BF721C70D9F10023B6E2 /* EliteDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EliteDevice.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				D867BF5A1C70A3AB0023B6E2 /* EliteLayer.swift */,
 				D867BF721C70D9F10023B6E2 /* EliteDevice.swift */,
 				D83C26281C712036000FC007 /* EliteString.swift */,
+				D83354CB1DA260C7006D756F /* EliteView.swift */,
 				D812AA7A1C734C9D003A6C28 /* EliteViewController.swift */,
 				D87963CA1C85D75A00F8ADB7 /* EliteAttributedString.swift */,
 				D88FA4971C86315C00C02B3E /* EliteDate.swift */,
@@ -226,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D83354CC1DA260C7006D756F /* EliteView.swift in Sources */,
 				D88FA49C1C863DF500C02B3E /* EliteMutableArray.swift in Sources */,
 				D87963CB1C85D75A00F8ADB7 /* EliteAttributedString.swift in Sources */,
 				D867BF6C1C70BAB40023B6E2 /* EliteColor.swift in Sources */,

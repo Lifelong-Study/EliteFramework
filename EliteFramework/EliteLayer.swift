@@ -16,14 +16,20 @@ public enum EliteDirection {
 }
 
 public extension CALayer {
-    public func renderGradientEffectsWithDirection(direction: EliteDirection, cgcolorsArray: Array<CGColor>) {
+    public func renderGradientEffectsWithDirection(direction: EliteDirection, colorsArray: [UIColor]) {
+        
+        var cgcolorArray: [CGColor] = Array()
+        
+        for color in colorsArray {
+            cgcolorArray.append(color.CGColor)
+        }
         
         // 初始化漸層效果
         let gradientLayer = CAGradientLayer()
         gradientLayer.startPoint = getStartPointWithDirection(direction)
         gradientLayer.endPoint   = getEndPointWithDirection(direction)
         gradientLayer.frame      = bounds
-        gradientLayer.colors     = cgcolorsArray
+        gradientLayer.colors     = cgcolorArray
         gradientLayer.name       = "GradientEffectsLayer"
         
         // 套用漸層效果
