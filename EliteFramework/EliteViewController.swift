@@ -18,6 +18,28 @@ public extension UIViewController {
     }
     
     // MARK:
+    public func getViewController(storyboard storyboard: String?, identifier: String?) -> UIViewController? {
+        
+        if storyboard == nil || identifier == nil {
+            return nil;
+        }
+        
+        let storyboard = UIStoryboard(name: storyboard!, bundle: nil)
+        
+        return storyboard.instantiateViewControllerWithIdentifier(identifier!)
+    }
+    
+    // MARK:
+    public func getViewController(identifier: String?) -> UIViewController? {
+        
+        if storyboard == nil || identifier == nil {
+            return nil;
+        }
+        
+        return storyboard!.instantiateViewControllerWithIdentifier(identifier!)
+    }
+    
+    // MARK:
     public func transferViewController(identifier: String?, animation: TransferAnimation) {
         return transferViewController(storyboard: storyboard!, identifier: identifier, animation: animation)
     }
@@ -36,13 +58,20 @@ public extension UIViewController {
     
     // MARK:
     public func transferViewController(storyboard storyboard: UIStoryboard?, identifier: String?, animation: TransferAnimation) {
-        
         // 防呆
         if storyboard == nil || identifier == nil || identifier?.length <= 0 {
             return
         }
         
-        let tatgetViewController = storyboard!.instantiateViewControllerWithIdentifier(identifier!)
+        transferViewController(storyboard!.instantiateViewControllerWithIdentifier(identifier!), animation: animation)
+    }
+    
+    // MARK:
+    public func transferViewController(viewController: UIViewController?, animation: TransferAnimation) {
+        // 防呆
+        if viewController == nil {
+            return
+        }
         
         let transition = CATransition()
         
@@ -50,11 +79,11 @@ public extension UIViewController {
         switch animation {
         case .Push:
             dispatch_async(dispatch_get_main_queue()) {
-                self.navigationController?.pushViewController(tatgetViewController, animated: true)
+                self.navigationController?.pushViewController(viewController!, animated: true)
             }
         case .Present:
             dispatch_async(dispatch_get_main_queue()) {
-                self.navigationController?.presentViewController(tatgetViewController, animated: false, completion: nil)
+                self.navigationController?.presentViewController(viewController!, animated: false, completion: nil)
             }
         case .Fade:
             transition.type = kCATransitionFade
@@ -64,7 +93,7 @@ public extension UIViewController {
             view.window?.layer.addAnimation(transition, forKey: nil)
             
             dispatch_async(dispatch_get_main_queue()) {
-                self.presentViewController(tatgetViewController, animated: false, completion: nil)
+                self.presentViewController(viewController!, animated: false, completion: nil)
             }
         }
     }
