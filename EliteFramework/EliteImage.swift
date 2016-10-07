@@ -10,6 +10,34 @@ import UIKit
 
 public extension UIImage {
     
+    convenience init(color: UIColor) {
+        
+        let rect = CGRectMake(0.0, 0.0, 1.0, 1.0)
+        
+        UIGraphicsBeginImageContext(rect.size)
+        
+        let context = UIGraphicsGetCurrentContext()
+        
+        if context == nil {
+            self.init()
+            return
+        }
+        
+        CGContextSetFillColorWithColor(context!, color.CGColor)
+        
+        CGContextFillRect(context!, rect)
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        
+        UIGraphicsEndImageContext()
+        
+        if image == nil {
+            self.init()
+        } else {
+            self.init(CGImage: image!.CGImage!)
+        }
+    }
+    
     func maskImage(ige: UIImage, maskImage: UIImage) -> UIImage? {
         
 //        let maskRef = maskImage.CGImage
