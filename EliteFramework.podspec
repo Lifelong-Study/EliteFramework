@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
   spec.platform = :ios, "8.0"
   spec.requires_arc = true
-  spec.source = { :git => "https://github.com/Lifelong-Study/EliteFramework.git", :tag => "v#{spec.version}" }
+  spec.source = { :git => "https://github.com/Lifelong-Study/EliteFramework.git", :tag => "v#{spec.version}", :branch => '3.0' }
   spec.source_files = "EliteFramework/*.{h,swift}"
 
 end
