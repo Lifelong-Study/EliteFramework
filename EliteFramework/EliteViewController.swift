@@ -58,11 +58,20 @@ public extension UIViewController {
     public func transferViewController(storyboard: UIStoryboard?, identifier: String?, animation: TransferAnimation) {
         
         // 防呆
-        if storyboard == nil || identifier == nil || identifier?.length <= 0 {
+        if storyboard == nil || identifier == nil {
             return
         }
         
-        let tatgetViewController = storyboard!.instantiateViewController(withIdentifier: identifier!)
+        transferViewController(viewController: storyboard!.instantiateViewController(withIdentifier: identifier!), animation: animation)
+    }
+    
+    // MARK:
+    public func transferViewController(viewController: UIViewController?, animation: TransferAnimation) {
+    
+        // 防呆
+        if viewController == nil {
+            return
+        }
         
         let transition = CATransition()
         
@@ -70,11 +79,11 @@ public extension UIViewController {
         switch animation {
         case .push:
             DispatchQueue.main.async {
-                self.navigationController?.pushViewController(tatgetViewController, animated: true)
+                self.navigationController?.pushViewController(viewController!, animated: true)
             }
         case .present:
             DispatchQueue.main.async {
-                self.navigationController?.present(tatgetViewController, animated: false, completion: nil)
+                self.navigationController?.present(viewController!, animated: false, completion: nil)
             }
         case .fade:
             transition.type = kCATransitionFade
@@ -84,7 +93,7 @@ public extension UIViewController {
             view.window?.layer.add(transition, forKey: nil)
             
             DispatchQueue.main.async {
-                self.present(tatgetViewController, animated: false, completion: nil)
+                self.present(viewController!, animated: false, completion: nil)
             }
         }
     }
