@@ -127,18 +127,22 @@ public extension UIViewController {
     }
     
     // MARK:
-    public func alertView(title title: String?, button: String?) {
-        alertView(title: title, message: nil, button: button)
+    public func alertController(title title: String?, button: String?) {
+        alertController(title: title, message: nil, button: button)
     }
     
     // MARK:
-    public func alertView(title title: String?, message: String?, button: String?) {
+    public func alertController(title title: String?, message: String?, button: String?) {
         
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
         
         alertController.addAction(UIAlertAction(title: button, style: .Default, handler: nil))
         
-        presentViewController(alertController, animated: true, completion: nil)
+        if navigationController != nil {
+            navigationController?.presentViewController(alertController, animated: true, completion: nil)
+        } else {
+            presentViewController(alertController, animated: true, completion: nil)
+        }
     }
 }
 
