@@ -127,12 +127,12 @@ public extension UIViewController {
     }
     
     // MARK:
-    public func alertController(title title: String?, button: String?) {
+    public func alertController(title title: String?, button: String) {
         alertController(title: title, message: nil, button: button)
     }
     
     // MARK:
-    public func alertController(title title: String?, message: String?, button: String?) {
+    public func alertController(title title: String?, message: String?, button: String) {
         
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
         
