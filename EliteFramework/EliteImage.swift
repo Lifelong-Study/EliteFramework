@@ -27,6 +27,24 @@ public extension UIImage {
         return nil
     }
     
+    
+    
+    convenience init(color: UIColor) {
+        
+        self.init()
+        
+        let rect = CGRect(x: 0.0, y: 0.0, width: 1.0, height: 1.0)
+        
+        UIGraphicsBeginImageContext(rect.size)
+        
+        draw(in: rect)
+        
+        UIGraphicsGetImageFromCurrentImageContext()
+        
+        UIGraphicsEndImageContext()
+    }
+    
+    
     func radians(_ degrees: Double) -> CGFloat {
         return CGFloat(degrees * M_PI / 180.0)
     }

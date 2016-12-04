@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name = "EliteFramework"
-  spec.version = "3.0.5"
+  spec.version = "3.0.6"
   spec.summary = "UI and NS extended, write shortcode do more."
   spec.homepage = "https://github.com/Lifelong-Study/EliteFramework"
   spec.license = { type: 'MIT', file: 'LICENSE' }
