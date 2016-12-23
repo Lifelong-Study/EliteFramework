@@ -31,17 +31,23 @@ public extension UIImage {
     
     convenience init(color: UIColor) {
         
-        self.init()
-        
         let rect = CGRect(x: 0.0, y: 0.0, width: 1.0, height: 1.0)
         
-        UIGraphicsBeginImageContext(rect.size)
+        UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
         
-        draw(in: rect)
+        color.setFill()
         
-        UIGraphicsGetImageFromCurrentImageContext()
+        UIRectFill(rect)
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
         
         UIGraphicsEndImageContext()
+        
+        if image?.cgImage == nil {
+            self.init()
+        } else {
+            self.init(cgImage: image!.cgImage!)
+        }
     }
     
     
