@@ -58,10 +58,10 @@ public extension CALayer {
     
     func endPoint(direction: RenderDirection) -> CGPoint {
         switch (direction) {
-            case .top:          return CGPoint(x: 0.5, y: 1)
-            case .bottom:       return CGPoint(x: 0.5, y: 0)
-            case .left:         return CGPoint(x: 1, y: 0.5)
-            case .right:        return CGPoint(x: 0, y: 0.5)
+            case .top:          return CGPoint(x: 0.5, y: 0)
+            case .bottom:       return CGPoint(x: 0.5, y: 1)
+            case .left:         return CGPoint(x: 0, y: 0.5)
+            case .right:        return CGPoint(x: 1, y: 0.5)
         }
     }
     
