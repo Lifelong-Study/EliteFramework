@@ -19,5 +19,4 @@ public extension UIView {
     func renderGradient(from: RenderDirection, to: RenderDirection, colors: [UIColor]) {
         layer.renderGradient(from: from, to: to, colors: colors)
     }
-    
 }

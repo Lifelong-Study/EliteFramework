@@ -10,25 +10,16 @@ import UIKit
 
 public extension UIImage {
     
-    func maskImage(_ ige: UIImage, maskImage: UIImage) -> UIImage? {
-        
-//        let maskRef = maskImage.CGImage
-//        
-//        let mask = CGImageMaskCreate(CGImageGetWidth(maskRef),
-//                                     CGImageGetHeight(maskRef),
-//                                     CGImageGetBitsPerComponent(maskRef),
-//                                     CGImageGetBitsPerPixel(maskRef),
-//                                     CGImageGetBytesPerRow(maskRef),
-//                                     CGImageGetDataProvider(maskRef), nil, false)
-//        
-//        let maskedImageRef = CGImageCreateWithMask(image.CGImage, mask)
-//        let maskedImage = UIImage(CGImage: maskedImageRef!)
-//        
-        return nil
+    //
+    fileprivate convenience init(image: UIImage?) {
+        if let cgimage = image?.cgImage {
+            self.init(cgImage: cgimage)
+        } else {
+            self.init()
+        }
     }
     
-    
-    
+    // initialization
     convenience init(color: UIColor) {
         
         let rect = CGRect(x: 0.0, y: 0.0, width: 1.0, height: 1.0)
@@ -43,14 +34,35 @@ public extension UIImage {
         
         UIGraphicsEndImageContext()
         
-        if image?.cgImage == nil {
-            self.init()
-        } else {
-            self.init(cgImage: image!.cgImage!)
+        self.init(image: image)
+    }
+    
+    convenience init(layer: CALayer) {
+        UIGraphicsBeginImageContextWithOptions(layer.bounds.size, false, 0.0)
+        
+        if let context = UIGraphicsGetCurrentContext() {
+            layer.render(in: context)
         }
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        
+        UIGraphicsEndImageContext()
+        
+        self.init(image: image)
     }
     
     
+    convenience init(render view: UIView, from: RenderDirection, to: RenderDirection, colors: [UIColor]) {
+        let layer = CALayer()
+        
+        layer.bounds = view.bounds
+        
+        layer.renderGradient(from: from, to: to, colors: colors)
+        
+        self.init(layer: layer)
+    }
+    
+    // function
     func radians(_ degrees: Double) -> CGFloat {
         return CGFloat(degrees * M_PI / 180.0)
     }
@@ -145,4 +157,7 @@ public extension UIImage {
         
         return image
     }
+    
+    
+    
 }

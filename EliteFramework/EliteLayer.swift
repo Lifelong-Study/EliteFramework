@@ -23,6 +23,9 @@ public enum RenderDirection {
 }
 
 public extension CALayer {
+    
+    
+    
     public func renderGradient(from: RenderDirection, to: RenderDirection, colors: [UIColor]) {
         
         var cgColorsArray: [CGColor] = Array()
@@ -33,8 +36,8 @@ public extension CALayer {
         
         // 初始化漸層效果
         let gradientLayer = CAGradientLayer()
-        gradientLayer.startPoint = startPoint(direction: from)
-        gradientLayer.endPoint   = endPoint(direction: to)
+        gradientLayer.startPoint = getPoint(direction: from)
+        gradientLayer.endPoint   = getPoint(direction: to)
         gradientLayer.frame      = bounds
         gradientLayer.colors     = cgColorsArray
         gradientLayer.name       = "GradientEffectsLayer"
@@ -47,16 +50,7 @@ public extension CALayer {
         }
     }
     
-    func startPoint(direction: RenderDirection) -> CGPoint {
-        switch (direction) {
-            case .top:          return CGPoint(x: 0.5, y: 0)
-            case .bottom:       return CGPoint(x: 0.5, y: 1)
-            case .left:         return CGPoint(x: 0, y: 0.5)
-            case .right:        return CGPoint(x: 1, y: 0.5)
-        }
-    }
-    
-    func endPoint(direction: RenderDirection) -> CGPoint {
+    func getPoint(direction: RenderDirection) -> CGPoint {
         switch (direction) {
             case .top:          return CGPoint(x: 0.5, y: 0)
             case .bottom:       return CGPoint(x: 0.5, y: 1)
