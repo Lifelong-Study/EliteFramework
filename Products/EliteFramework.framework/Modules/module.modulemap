@@ -1,0 +1,3 @@
+framework module EliteFramework {
+    header "EliteFramework-Swift.h"
+}
