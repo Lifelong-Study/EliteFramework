@@ -22,6 +22,9 @@ public extension Date {
         get {
             return objc_getAssociatedObject(self, &associatedKeys.dateFormatter) as! DateFormatter
         }
+        set(value) {
+            objc_setAssociatedObject(self, &associatedKeys.dateFormatter, value, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
     }
     
     fileprivate func dateByZeroSecond(date: Date) -> Date {
