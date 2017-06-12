@@ -39,36 +39,42 @@ public extension UIViewController {
     }
     
     // MARK:
-    public func transferViewController(_ identifier: String?, animation: TransferAnimation) {
-        return transferViewController(storyboard: storyboard!, identifier: identifier, animation: animation)
-    }
+//    public func transfer(storyboard: String?, identifier: String?, animation: TransferAnimation) {
+//        transferViewController(storyboard: String?, identifier: String?, animation: TransferAnimation)
+//    }
     
     // MARK:
-    public func transferViewController(storyboard: String?, identifier: String?, animation: TransferAnimation) {
-        
-        if storyboard == nil {
-            return ;
-        }
-        
-        let storyboard = UIStoryboard(name: storyboard!, bundle: nil)
-        
-        return transferViewController(storyboard: storyboard, identifier: identifier, animation: animation)
-    }
+//    public func transferViewController(storyboard: String?, identifier: String?, animation: TransferAnimation) {
+//
+//        if storyboard == nil {
+//            return ;
+//        }
+//
+//        let storyboard = UIStoryboard(name: storyboard!, bundle: nil)
+//
+//        return transferViewController(storyboard: storyboard, identifier: identifier, animation: animation)
+//    }
     
     // MARK:
-    public func transferViewController(storyboard: UIStoryboard?, identifier: String?, animation: TransferAnimation) {
-        
+    public func transfer(storyboard: UIStoryboard?, identifier: String?, animation: TransferAnimation) {
         // 防呆
         if storyboard == nil || identifier == nil {
             return
         }
         
-        transferViewController(viewController: storyboard!.instantiateViewController(withIdentifier: identifier!), animation: animation)
+        transfer(viewController: storyboard!.instantiateViewController(withIdentifier: identifier!), animation: animation)
+//        transferViewController(viewController: storyboard!.instantiateViewController(withIdentifier: identifier!), animation: animation)
     }
     
     // MARK:
-    public func transferViewController(viewController: UIViewController?, animation: TransferAnimation) {
+//    @available(*, deprecated, renamed: "transfer")
+//    public func transferViewController(storyboard: UIStoryboard?, identifier: String?, animation: TransferAnimation) {
+//        transfer(storyboard: UIStoryboard?, identifier: String?, animation: TransferAnimation)
+//    }
     
+    // MARK:
+    public func transfer(viewController: UIViewController?, animation: TransferAnimation) {
+        
         // 防呆
         if viewController == nil {
             return

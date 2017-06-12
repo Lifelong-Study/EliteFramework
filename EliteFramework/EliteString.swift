@@ -26,7 +26,7 @@ public extension String {
     func height(withFont font: UIFont, constrainedWidth width: CGFloat) -> CGFloat {
         let constraintRect = CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)
         
-        let boundingBox = self.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
+        let boundingBox = self.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil)
         
         return boundingBox.height
     }
@@ -34,7 +34,7 @@ public extension String {
     func width(withFont font: UIFont, constrainedHeight height: CGFloat) -> CGFloat {
         let constraintRect = CGSize(width: CGFloat.greatestFiniteMagnitude, height: height)
         
-        let boundingBox = self.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
+        let boundingBox = self.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil)
         
         return boundingBox.width
     }
@@ -53,13 +53,7 @@ public extension NSInteger {
 }
 
 public extension Float {
-    var stringValue: String {
-        
-        if isNaN { print("s1") }
-        if isNormal { print("s2") }
-        if isZero { print("s3") }
-        if isFinite { print("s4") }
-        
+    var stringValue: String {        
         return isNaN || isNormal ? "" : NSNumber(value: self as Float).stringValue
     }
 }

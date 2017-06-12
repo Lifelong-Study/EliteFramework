@@ -41,7 +41,7 @@ public extension Date {
         return calendar.date(from: components!) as Date!
     }
     
-    public func stringFromFormat(format: String) -> String? {
+    public func string(format: String) -> String? {
         let dateFormatter = DateFormatter()
         
         dateFormatter.dateFormat = format

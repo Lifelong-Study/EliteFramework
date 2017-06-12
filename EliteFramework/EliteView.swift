@@ -11,11 +11,6 @@ import UIKit
 public extension UIView {
     
     //
-    @available(*, deprecated, renamed: "renderGradient")
-    func renderGradientEffects(withDirection direction: EliteDirection, colorsArray: Array<UIColor>) {
-        layer.renderGradientEffects(withDirection: direction, colorsArray: colorsArray)
-    }
-    
     func renderGradient(from: RenderDirection, to: RenderDirection, colors: [UIColor]) {
         layer.renderGradient(from: from, to: to, colors: colors)
     }
