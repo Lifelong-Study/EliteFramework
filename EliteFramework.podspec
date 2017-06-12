@@ -8,9 +8,9 @@ Pod::Spec.new do |spec|
   spec.authors = { "SongHua" => 'songhua.develop@gmail.com' }
 #  spec.social_media_url = ""
 
-  spec.platform = :ios, "8.0"
+  spec.platform = :ios, "11.0"
   spec.requires_arc = true
-  spec.source = { :git => "https://github.com/Lifelong-Study/EliteFramework.git", :tag => "v#{spec.version}", :branch => '3.0' }
+  spec.source = { :git => "https://github.com/Lifelong-Study/EliteFramework.git", :tag => "v#{spec.version}", :branch => '4.0' }
   spec.source_files = "EliteFramework/*.{h,swift}"
 
 end
