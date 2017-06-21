@@ -64,7 +64,7 @@ public extension UIImage {
     
     // function
     func radians(_ degrees: Double) -> CGFloat {
-        return CGFloat(degrees * M_PI / 180.0)
+        return CGFloat(degrees * Double.pi / 180.0)
     }
     
     /*! 影像剪裁 */
