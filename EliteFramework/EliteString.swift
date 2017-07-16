@@ -23,6 +23,12 @@ public extension String {
         }
     }
     
+    var isNumber: Bool {
+        get{
+            return !self.isEmpty && self.rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil
+        }
+    }
+    
     func height(withFont font: UIFont, constrainedWidth width: CGFloat) -> CGFloat {
         let constraintRect = CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)
         
