@@ -10,29 +10,18 @@ import UIKit
 
 public extension Date {
     
-    var dateByZeroSecond: Date {
-        return dateByZeroSecond(date: self)
+    public var dateByZeroSecond: Date {
+        return self
     }
     
-    private struct associatedKeys {
-        static var dateFormatter: DateFormatter = DateFormatter()
-    }
-    
-    var dateFormatter: DateFormatter {
-        get {
-            return objc_getAssociatedObject(self, &associatedKeys.dateFormatter) as! DateFormatter
-        }
-        set(value) {
-            objc_setAssociatedObject(self, &associatedKeys.dateFormatter, value, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        }
-    }
-    
-    fileprivate func dateByZeroSecond(date: Date) -> Date {
+    public func dateByZeroSecond(date: Date) -> Date {
         var calendar = Calendar(identifier: Calendar.Identifier.gregorian)
         
         calendar.timeZone = .current
         
         let components = (calendar as NSCalendar).components([.year, .month, .day], from: date)
+        
+        let dateFormatter = DateFormatter()
         
         dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss.SSS"
         
@@ -41,7 +30,7 @@ public extension Date {
         return dateFormatter.date(from: dateString)!
     }
     
-    func cleanNanosecond() -> Date {
+    public func cleanNanosecond() -> Date {
         
         let calendar = Calendar(identifier: Calendar.Identifier.gregorian)
         
@@ -52,14 +41,9 @@ public extension Date {
         return calendar.date(from: components!) as Date!
     }
     
-    @available(*, deprecated, renamed: "string")
-    func stringFromFormat(format: String) -> String? {
-        dateFormatter.dateFormat = format
+    public func stringFromFormat(format: String) -> String? {
+        let dateFormatter = DateFormatter()
         
-        return dateFormatter.string(from: self)
-    }
-    
-    func string(withFormat format: String) -> String? {
         dateFormatter.dateFormat = format
         
         return dateFormatter.string(from: self)
@@ -109,11 +93,13 @@ public extension Date {
     var second: Int? { return (calendar() as NSCalendar?)?.components([.second], from: self).second }
     
     var shortweek: String? {
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEE"
         return dateFormatter.string(from: self)
     }
     
     var longweek: String? {
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE"
         return dateFormatter.string(from: self)
     }
