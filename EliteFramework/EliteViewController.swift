@@ -8,26 +8,6 @@
 
 import UIKit
 
-fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l < r
-  case (nil, _?):
-    return true
-  default:
-    return false
-  }
-}
-
-fileprivate func <= <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l <= r
-  default:
-    return !(rhs < lhs)
-  }
-}
-
 
 public extension UIViewController {
 
@@ -41,23 +21,12 @@ public extension UIViewController {
     
     // MARK:
     public func transfer(_ identifier: String?, animation: TransferAnimation) {
-        return transferViewController(storyboard: storyboard!, identifier: identifier, animation: animation)
-    }
-    
-    // MARK:
-    @available(*, deprecated, renamed: "transfer")
-    public func transferViewController(_ identifier: String?, animation: TransferAnimation) {
-        return transferViewController(storyboard: storyboard!, identifier: identifier, animation: animation)
+        transfer(storyboard: storyboard!, identifier: identifier, animation: animation)
     }
     
     // MARK:
     public func transfer(storyboard: String?, identifier: String?, animation: TransferAnimation) {
-        transferViewController(storyboard: storyboard, identifier: identifier, animation: animation)
-    }
-    
-    // MARK:
-    @available(*, deprecated, renamed: "transfer")
-    public func transferViewController(storyboard: String?, identifier: String?, animation: TransferAnimation) {
+
         
         if storyboard == nil {
             return ;
@@ -65,29 +34,23 @@ public extension UIViewController {
         
         let storyboard = UIStoryboard(name: storyboard!, bundle: nil)
         
-        return transferViewController(storyboard: storyboard, identifier: identifier, animation: animation)
+        transfer(storyboard: storyboard, identifier: identifier, animation: animation)
     }
     
     // MARK:
-    @available(*, deprecated, renamed: "transfer")
-    public func transferViewController(storyboard: UIStoryboard?, identifier: String?, animation: TransferAnimation) {
+    public func transfer(storyboard: UIStoryboard?, identifier: String?, animation: TransferAnimation) {
         
         // 防呆
         if storyboard == nil || identifier == nil {
             return
         }
         
-        transferViewController(viewController: storyboard!.instantiateViewController(withIdentifier: identifier!), animation: animation)
-    }
-    
-    public func transfer(viewController: UIViewController?, animation: TransferAnimation) {
-        transferViewController(viewController: viewController, animation: animation)
+        transfer(viewController: storyboard!.instantiateViewController(withIdentifier: identifier!), animation: animation)
     }
     
     // MARK:
-    @available(*, deprecated, renamed: "transfer")
-    public func transferViewController(viewController: UIViewController?, animation: TransferAnimation) {
-    
+    public func transfer(viewController: UIViewController?, animation: TransferAnimation) {
+
         // 防呆
         if viewController == nil {
             return
@@ -146,19 +109,13 @@ public extension UIViewController {
         return imagePickerController
     }
     
+    // MARK:
     public func alert(title: String, button: String) {
-        alertController(title: title, message: nil, button: button)
+        alert(title: title, message: nil, button: button)
     }
     
     // MARK:
-    @available(*, deprecated, renamed: "alert")
-    public func alertController(title: String, button: String) {
-        alertController(title: title, message: nil, button: button)
-    }
-    
-    // MARK:
-    @available(*, deprecated, renamed: "alert")
-    public func alertController(title: String, message: String?, button: String) {
+    public func alert(title: String, message: String?, button: String) {
         
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
