@@ -41,8 +41,6 @@
 		D867BF6D1C70BAB40023B6E2 /* EliteLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D867BF5A1C70A3AB0023B6E2 /* EliteLayer.swift */; };
 		D87963CB1C85D75A00F8ADB7 /* EliteAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87963CA1C85D75A00F8ADB7 /* EliteAttributedString.swift */; };
 		D88FA4981C86315C00C02B3E /* EliteDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FA4971C86315C00C02B3E /* EliteDate.swift */; };
-		D88FA49A1C863CF900C02B3E /* EliteArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FA4991C863CF900C02B3E /* EliteArray.swift */; };
-		D88FA49C1C863DF500C02B3E /* EliteMutableArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FA49B1C863DF500C02B3E /* EliteMutableArray.swift */; };
 		D891AFA51C90290E004BC0AA /* EliteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D891AFA41C90290E004BC0AA /* EliteImage.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,8 +53,6 @@
 		D867BF5A1C70A3AB0023B6E2 /* EliteLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EliteLayer.swift; sourceTree = "<group>"; };
 		D87963CA1C85D75A00F8ADB7 /* EliteAttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EliteAttributedString.swift; sourceTree = "<group>"; };
 		D88FA4971C86315C00C02B3E /* EliteDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EliteDate.swift; sourceTree = "<group>"; };
-		D88FA4991C863CF900C02B3E /* EliteArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EliteArray.swift; sourceTree = "<group>"; };
-		D88FA49B1C863DF500C02B3E /* EliteMutableArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EliteMutableArray.swift; sourceTree = "<group>"; };
 		D891AFA41C90290E004BC0AA /* EliteImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EliteImage.swift; sourceTree = "<group>"; };
 		D8E9DC811C23015F00764801 /* EliteFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EliteFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8E9DC861C23015F00764801 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,8 +96,6 @@
 				D812AA7A1C734C9D003A6C28 /* EliteViewController.swift */,
 				D87963CA1C85D75A00F8ADB7 /* EliteAttributedString.swift */,
 				D88FA4971C86315C00C02B3E /* EliteDate.swift */,
-				D88FA4991C863CF900C02B3E /* EliteArray.swift */,
-				D88FA49B1C863DF500C02B3E /* EliteMutableArray.swift */,
 				D891AFA41C90290E004BC0AA /* EliteImage.swift */,
 				D83CD8D11E2E2BB3008C3A6F /* UIButton.swift */,
 				D81B56B21CF8C0020044E6DF /* EliteLayoutConstraint.swift */,
@@ -228,13 +222,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D853307A1D9B410F006C965C /* EliteView.swift in Sources */,
-				D88FA49C1C863DF500C02B3E /* EliteMutableArray.swift in Sources */,
 				D87963CB1C85D75A00F8ADB7 /* EliteAttributedString.swift in Sources */,
 				D867BF6C1C70BAB40023B6E2 /* EliteColor.swift in Sources */,
 				D88FA4981C86315C00C02B3E /* EliteDate.swift in Sources */,
 				D81B56B31CF8C0020044E6DF /* EliteLayoutConstraint.swift in Sources */,
 				D83C26291C712036000FC007 /* EliteString.swift in Sources */,
-				D88FA49A1C863CF900C02B3E /* EliteArray.swift in Sources */,
 				D891AFA51C90290E004BC0AA /* EliteImage.swift in Sources */,
 				D812AA7B1C734C9D003A6C28 /* EliteViewController.swift in Sources */,
 				D867BF6D1C70BAB40023B6E2 /* EliteLayer.swift in Sources */,

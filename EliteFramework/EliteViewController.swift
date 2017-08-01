@@ -38,12 +38,25 @@ public extension UIViewController {
         case fade
     }
     
+    
     // MARK:
+    public func transfer(_ identifier: String?, animation: TransferAnimation) {
+        return transferViewController(storyboard: storyboard!, identifier: identifier, animation: animation)
+    }
+    
+    // MARK:
+    @available(*, deprecated, renamed: "transfer")
     public func transferViewController(_ identifier: String?, animation: TransferAnimation) {
         return transferViewController(storyboard: storyboard!, identifier: identifier, animation: animation)
     }
     
     // MARK:
+    public func transfer(storyboard: String?, identifier: String?, animation: TransferAnimation) {
+        transferViewController(storyboard: storyboard, identifier: identifier, animation: animation)
+    }
+    
+    // MARK:
+    @available(*, deprecated, renamed: "transfer")
     public func transferViewController(storyboard: String?, identifier: String?, animation: TransferAnimation) {
         
         if storyboard == nil {
@@ -56,6 +69,7 @@ public extension UIViewController {
     }
     
     // MARK:
+    @available(*, deprecated, renamed: "transfer")
     public func transferViewController(storyboard: UIStoryboard?, identifier: String?, animation: TransferAnimation) {
         
         // 防呆
@@ -66,7 +80,12 @@ public extension UIViewController {
         transferViewController(viewController: storyboard!.instantiateViewController(withIdentifier: identifier!), animation: animation)
     }
     
+    public func transfer(viewController: UIViewController?, animation: TransferAnimation) {
+        transferViewController(viewController: viewController, animation: animation)
+    }
+    
     // MARK:
+    @available(*, deprecated, renamed: "transfer")
     public func transferViewController(viewController: UIViewController?, animation: TransferAnimation) {
     
         // 防呆
@@ -127,12 +146,18 @@ public extension UIViewController {
         return imagePickerController
     }
     
+    public func alert(title: String, button: String) {
+        alertController(title: title, message: nil, button: button)
+    }
+    
     // MARK:
+    @available(*, deprecated, renamed: "alert")
     public func alertController(title: String, button: String) {
         alertController(title: title, message: nil, button: button)
     }
     
     // MARK:
+    @available(*, deprecated, renamed: "alert")
     public func alertController(title: String, message: String?, button: String) {
         
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
