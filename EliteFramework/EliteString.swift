@@ -29,7 +29,7 @@ public extension String {
         }
     }
     
-    func height(withFont font: UIFont, constrainedWidth width: CGFloat) -> CGFloat {
+    func height(font: UIFont, constrainedWidth width: CGFloat) -> CGFloat {
         let constraintRect = CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)
         
         let boundingBox = self.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
@@ -37,7 +37,7 @@ public extension String {
         return boundingBox.height
     }
     
-    func width(withFont font: UIFont, constrainedHeight height: CGFloat) -> CGFloat {
+    func width(font: UIFont, constrainedHeight height: CGFloat) -> CGFloat {
         let constraintRect = CGSize(width: CGFloat.greatestFiniteMagnitude, height: height)
         
         let boundingBox = self.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
@@ -45,7 +45,7 @@ public extension String {
         return boundingBox.width
     }
     
-    func date(withFormat format: String) -> Date? {
+    func date(format: String) -> Date? {
         let dateFormatter = DateFormatter()
         
         dateFormatter.dateFormat = format

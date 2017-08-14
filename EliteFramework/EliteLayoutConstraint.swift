@@ -21,51 +21,51 @@ public extension NSLayoutConstraint {
     }
     
     //
-    class func constraints(withVisualFormat format: String, views: [String : AnyObject]) -> [NSLayoutConstraint] {
+    class func constraints(format: String, views: [String : AnyObject]) -> [NSLayoutConstraint] {
         return constraints(withVisualFormat: format, options: .directionLeadingToTrailing, metrics: nil, views: views)
     }
     
     //
-    class func constraints(withVisualFormat format: String, metrics: [String : Any]?, views: [String : AnyObject]) -> [NSLayoutConstraint] {
+    class func constraints(format: String, metrics: [String : Any]?, views: [String : AnyObject]) -> [NSLayoutConstraint] {
         return constraints(withVisualFormat: format, options: .directionLeadingToTrailing, metrics: metrics, views: views)
     }
     
     //
-    class func equal(item: UIView, toItem: UIView, attribute: NSLayoutAttribute) -> NSLayoutConstraint {
-        return equal(item: item, toItem: toItem, attribute: attribute, offset: 0.0)
+    class func constraints(item: UIView, equal: UIView, attribute: NSLayoutAttribute) -> NSLayoutConstraint {
+        return constraints(item: item, toItem: equal, attribute: attribute, offset: 0.0)
     }
     
     //
-    class func equal(item: UIView, toItem: UIView, attribute: NSLayoutAttribute, offset: CGFloat) -> NSLayoutConstraint {
+    class func constraints(item: UIView, toItem: UIView, attribute: NSLayoutAttribute, offset: CGFloat) -> NSLayoutConstraint {
         return NSLayoutConstraint(item: item, attribute: attribute, relatedBy: .equal, toItem: toItem, attribute: attribute, multiplier: 1.0, constant: offset)
     }
     
     //
-    class func equal(item: UIView, attribute: NSLayoutAttribute) -> NSLayoutConstraint {
-        return equal(item: item, toItem: item.superview!, attribute: attribute, offset: 0.0)
+    class func constraints(item: UIView, attribute: NSLayoutAttribute) -> NSLayoutConstraint {
+        return constraints(item: item, toItem: item.superview!, attribute: attribute, offset: 0.0)
     }
     
     //
-    class func equal(item: UIView, attribute: NSLayoutAttribute, offset: CGFloat) -> NSLayoutConstraint {
+    class func constraints(item: UIView, attribute: NSLayoutAttribute, offset: CGFloat) -> NSLayoutConstraint {
         return NSLayoutConstraint(item: item, attribute: attribute, relatedBy: .equal, toItem: item.superview!, attribute: attribute, multiplier: 1.0, constant: offset)
     }
     
     //
-    class func equal(item: UIView, attribute: NSLayoutAttribute, toAttribute: NSLayoutAttribute) -> NSLayoutConstraint {
-        return equal(item: item, attribute: attribute, toAttribute: toAttribute, multiplier: 1.0)
+    class func constraints(item: UIView, attribute: NSLayoutAttribute, toAttribute: NSLayoutAttribute) -> NSLayoutConstraint {
+        return constraints(item: item, attribute: attribute, toAttribute: toAttribute, multiplier: 1.0)
     }
     
     //
-    class func equal(item: UIView, attribute: NSLayoutAttribute, toAttribute: NSLayoutAttribute, multiplier: CGFloat) -> NSLayoutConstraint {
+    class func constraints(item: UIView, attribute: NSLayoutAttribute, toAttribute: NSLayoutAttribute, multiplier: CGFloat) -> NSLayoutConstraint {
         return NSLayoutConstraint(item: item, attribute: attribute, relatedBy: .equal, toItem: item.superview!, attribute: toAttribute, multiplier: multiplier, constant: 0.0)
     }
     
     //
-    class func equal(item: UIView, toItem: UIView) -> [NSLayoutConstraint] {
-        return [equal(item: item, toItem: toItem, attribute: .width),
-                equal(item: item, toItem: toItem, attribute: .height),
-                equal(item: item, toItem: toItem, attribute: .centerX),
-                equal(item: item, toItem: toItem, attribute: .centerY)]
+    class func constraints(item: UIView, equal: UIView) -> [NSLayoutConstraint] {
+        return [constraints(item: item, equal: equal, attribute: .width),
+                constraints(item: item, equal: equal, attribute: .height),
+                constraints(item: item, equal: equal, attribute: .centerX),
+                constraints(item: item, equal: equal, attribute: .centerY)]
     }
     
     //
