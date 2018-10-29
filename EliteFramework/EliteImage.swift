@@ -123,7 +123,7 @@ public extension UIImage {
         UIGraphicsBeginImageContext(rect.size)
         draw(in: rect)
         let image = UIGraphicsGetImageFromCurrentImageContext()
-        let imageData = UIImageJPEGRepresentation(image!, CGFloat(quality))
+        let imageData = image?.jpegData(compressionQuality: CGFloat(quality))
         UIGraphicsEndImageContext()
         
         
@@ -131,7 +131,7 @@ public extension UIImage {
     }
     
     //!
-    func rotate(orientation: UIImageOrientation) -> UIImage? {
+    func rotate(orientation: UIImage.Orientation) -> UIImage? {
         
         if orientation != .right && orientation != .left {
             return self

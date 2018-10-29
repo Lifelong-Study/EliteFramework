@@ -66,9 +66,9 @@ public extension UIViewController {
                 self.navigationController?.present(viewController!, animated: false, completion: nil)
             }
         case .fade:
-            transition.type = kCATransitionFade
+            transition.type = CATransitionType.fade
             transition.duration = 0.2
-            transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+            transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
             
             view.window?.layer.add(transition, forKey: nil)
             

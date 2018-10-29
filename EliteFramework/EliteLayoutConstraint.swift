@@ -11,12 +11,12 @@ import UIKit
 public extension NSLayoutConstraint {
     
     //
-    class func constraint(item: UIView, attribute: NSLayoutAttribute) -> NSLayoutConstraint {
+    class func constraint(item: UIView, attribute: NSLayoutConstraint.Attribute) -> NSLayoutConstraint {
         return constraint(item: item, attribute: attribute, offset: 0.0)
     }
     
     //
-    class func constraint(item: UIView, attribute: NSLayoutAttribute, offset: CGFloat) -> NSLayoutConstraint {
+    class func constraint(item: UIView, attribute: NSLayoutConstraint.Attribute, offset: CGFloat) -> NSLayoutConstraint {
         return NSLayoutConstraint(item: item, attribute: attribute, relatedBy: .equal, toItem: item.superview, attribute: attribute, multiplier: 1.0, constant: offset)
     }
     
@@ -31,32 +31,32 @@ public extension NSLayoutConstraint {
     }
     
     //
-    class func equal(item: UIView, toItem: UIView, attribute: NSLayoutAttribute) -> NSLayoutConstraint {
+    class func equal(item: UIView, toItem: UIView, attribute: NSLayoutConstraint.Attribute) -> NSLayoutConstraint {
         return equal(item: item, toItem: toItem, attribute: attribute, offset: 0.0)
     }
     
     //
-    class func equal(item: UIView, toItem: UIView, attribute: NSLayoutAttribute, offset: CGFloat) -> NSLayoutConstraint {
+    class func equal(item: UIView, toItem: UIView, attribute: NSLayoutConstraint.Attribute, offset: CGFloat) -> NSLayoutConstraint {
         return NSLayoutConstraint(item: item, attribute: attribute, relatedBy: .equal, toItem: toItem, attribute: attribute, multiplier: 1.0, constant: offset)
     }
     
     //
-    class func equal(item: UIView, attribute: NSLayoutAttribute) -> NSLayoutConstraint {
+    class func equal(item: UIView, attribute: NSLayoutConstraint.Attribute) -> NSLayoutConstraint {
         return equal(item: item, toItem: item.superview!, attribute: attribute, offset: 0.0)
     }
     
     //
-    class func equal(item: UIView, attribute: NSLayoutAttribute, offset: CGFloat) -> NSLayoutConstraint {
+    class func equal(item: UIView, attribute: NSLayoutConstraint.Attribute, offset: CGFloat) -> NSLayoutConstraint {
         return NSLayoutConstraint(item: item, attribute: attribute, relatedBy: .equal, toItem: item.superview!, attribute: attribute, multiplier: 1.0, constant: offset)
     }
     
     //
-    class func equal(item: UIView, attribute: NSLayoutAttribute, toAttribute: NSLayoutAttribute) -> NSLayoutConstraint {
+    class func equal(item: UIView, attribute: NSLayoutConstraint.Attribute, toAttribute: NSLayoutConstraint.Attribute) -> NSLayoutConstraint {
         return equal(item: item, attribute: attribute, toAttribute: toAttribute, multiplier: 1.0)
     }
     
     //
-    class func equal(item: UIView, attribute: NSLayoutAttribute, toAttribute: NSLayoutAttribute, multiplier: CGFloat) -> NSLayoutConstraint {
+    class func equal(item: UIView, attribute: NSLayoutConstraint.Attribute, toAttribute: NSLayoutConstraint.Attribute, multiplier: CGFloat) -> NSLayoutConstraint {
         return NSLayoutConstraint(item: item, attribute: attribute, relatedBy: .equal, toItem: item.superview!, attribute: toAttribute, multiplier: multiplier, constant: 0.0)
     }
     
@@ -69,12 +69,12 @@ public extension NSLayoutConstraint {
     }
     
     //
-    class func constraint(item: UIView, attribute: NSLayoutAttribute, equalAttribute: NSLayoutAttribute) -> NSLayoutConstraint {
+    class func constraint(item: UIView, attribute: NSLayoutConstraint.Attribute, equalAttribute: NSLayoutConstraint.Attribute) -> NSLayoutConstraint {
         return NSLayoutConstraint(item: item, attribute: attribute, relatedBy: .equal, toItem: item, attribute: equalAttribute, multiplier: 1.0, constant: 0.0)
     }
     
     //
-    class func constraint(item: UIView, attribute: NSLayoutAttribute, equalAttribute: NSLayoutAttribute, offset: CGFloat) -> NSLayoutConstraint {
+    class func constraint(item: UIView, attribute: NSLayoutConstraint.Attribute, equalAttribute: NSLayoutConstraint.Attribute, offset: CGFloat) -> NSLayoutConstraint {
         return NSLayoutConstraint(item: item, attribute: attribute, relatedBy: .equal, toItem: item, attribute: equalAttribute, multiplier: 1.0, constant: offset)
     }
     

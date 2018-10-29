@@ -38,7 +38,7 @@ public extension Date {
         
         components?.nanosecond = 0
         
-        return calendar.date(from: components!) as Date!
+        return calendar.date(from: components!) as! Date
     }
     
     public func string(format: String) -> String? {
