@@ -9,19 +9,11 @@
 import UIKit
 
 public extension String {
-    var length: Int { return self.characters.count }
     
-    var floatValue: Float { return (self as NSString).floatValue }
-    var doubleValue: Double { return (self as NSString).doubleValue }
-    var integerValue: NSInteger { return (self as NSString).integerValue }
-    
-    func ints() -> Double {
-        if length == 0 {
-            return 0
-        } else {
-            return (self as NSString).doubleValue
-        }
-    }
+    var floatValue:     Float     { return (self as NSString).floatValue }
+    var doubleValue:    Double    { return (self as NSString).doubleValue }
+    var integerValue:   NSInteger { return (self as NSString).integerValue }
+    var intValue:       Int       { return Int((self as NSString).integerValue) }
     
     var isNumber: Bool {
         get{
@@ -29,12 +21,20 @@ public extension String {
         }
     }
     
+    func height(withFont font: UIFont) -> CGFloat {
+        return height(withFont: font, constrainedWidth: CGFloat.greatestFiniteMagnitude)
+    }
+    
     func height(withFont font: UIFont, constrainedWidth width: CGFloat) -> CGFloat {
         let constraintRect = CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)
         
         let boundingBox = self.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
         
-        return boundingBox.height
+        return boundingBox.height + 1.0
+    }
+    
+    func width(withFont font: UIFont) -> CGFloat {
+        return width(withFont: font, constrainedHeight: CGFloat.greatestFiniteMagnitude)
     }
     
     func width(withFont font: UIFont, constrainedHeight height: CGFloat) -> CGFloat {
@@ -42,7 +42,7 @@ public extension String {
         
         let boundingBox = self.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
         
-        return boundingBox.width
+        return boundingBox.width + 1.0
     }
     
     func date(withFormat format: String) -> Date? {
@@ -59,7 +59,7 @@ public extension NSInteger {
 }
 
 public extension Float {
-    var stringValue: String {        
+    var stringValue: String {
         return isNaN || isNormal ? "" : NSNumber(value: self as Float).stringValue
     }
 }
@@ -67,7 +67,7 @@ public extension Float {
 public extension Double {
     var stringValue: String { return isNaN || isNormal ? "" : NSNumber(value: self as Double).stringValue }
     
-    public func stringValue(_ fractionDigits: NSInteger) -> String {
+    func stringValue(_ fractionDigits: NSInteger) -> String {
         
         let numberFormatter = NumberFormatter()
         numberFormatter.maximumFractionDigits = fractionDigits

@@ -14,4 +14,14 @@ public extension UIView {
     func renderGradient(from: RenderDirection, to: RenderDirection, colors: [UIColor]) {
         layer.renderGradient(from: from, to: to, colors: colors)
     }
+    
+    //
+    func removeRenderGradient() {
+        layer.removeRenderGradient()
+    }
+    
+    //
+    func rotation(duration: Float) {
+        layer.rotation(duration: duration)
+    }
 }
