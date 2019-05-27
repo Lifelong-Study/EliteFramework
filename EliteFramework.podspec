@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
   spec.name = "EliteFramework"
   #swift_version = spec.swift_version.to_s
   #spec.build_settings['SWIFT_VERSION'] = '5.0'
-  spec.swift_version = '>= 5.0'
+  spec.swift_version = "5.0"
 
   spec.version = "5.0.0"
   spec.summary = "UI and NS extended, write shortcode do more."
