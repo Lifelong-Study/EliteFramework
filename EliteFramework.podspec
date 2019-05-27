@@ -13,5 +13,5 @@ Pod::Spec.new do |spec|
   spec.source = { :git => "https://github.com/Lifelong-Study/EliteFramework.git", :tag => "v#{spec.version}", :branch => '5.0' }
   spec.source_files = "EliteFramework/*.{h,swift}"
 
-  swift_version = spec.swift_version.to_s
+  spec.swift_version = "5.0"
 end
