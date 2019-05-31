@@ -11,19 +11,19 @@ import UIKit
 public extension UIViewController {
     
     // 過場動畫
-    public enum TransferAnimation {
+    enum TransferAnimation {
         case push
         case present
         case fade
     }
     
     // MARK:
-    public func transfer(identifier: String, animation: TransferAnimation) {
+    func transfer(identifier: String, animation: TransferAnimation) {
         transfer(viewController: storyboard?.instantiateViewController(withIdentifier: identifier), animation: animation)
     }
     
     // MARK:
-    public func transfer(storyboard: String, identifier: String?, animation: TransferAnimation) {
+    func transfer(storyboard: String, identifier: String?, animation: TransferAnimation) {
         
         // 防呆
         if identifier == nil {
@@ -35,7 +35,7 @@ public extension UIViewController {
     }
     
     // MARK:
-    public func transfer(storyboard: UIStoryboard?, identifier: String?, animation: TransferAnimation) {
+    func transfer(storyboard: UIStoryboard?, identifier: String?, animation: TransferAnimation) {
         
         // 防呆
         if identifier == nil {
@@ -46,7 +46,7 @@ public extension UIViewController {
     }
     
     // MARK:
-    public func transfer(viewController: UIViewController?, animation: TransferAnimation) {
+    func transfer(viewController: UIViewController?, animation: TransferAnimation) {
         
         // 防呆
         if viewController == nil {
@@ -79,7 +79,7 @@ public extension UIViewController {
     }
     
     // MARK:
-    public func transferCameraViewController() -> UIImagePickerController {
+    func transferCameraViewController() -> UIImagePickerController {
         
         let imagePickerController = UIImagePickerController()
         
@@ -93,7 +93,7 @@ public extension UIViewController {
     }
     
     // MARK:
-    public func transferPhotoLibraryViewController() -> UIImagePickerController {
+    func transferPhotoLibraryViewController() -> UIImagePickerController {
         
         let imagePickerController = UIImagePickerController()
         
@@ -107,12 +107,12 @@ public extension UIViewController {
     }
     
     // MARK:
-    public func alert(title: String, button: String) {
+    func alert(title: String, button: String) {
         alert(title: title, message: nil, button: button)
     }
     
     // MARK:
-    public func alert(title: String, message: String?, button: String) {
+    func alert(title: String, message: String?, button: String) {
         
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         

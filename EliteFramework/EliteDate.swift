@@ -10,11 +10,11 @@ import UIKit
 
 public extension Date {
     
-    public var dateByZeroSecond: Date {
+    var dateByZeroSecond: Date {
         return self
     }
     
-    public func dateByZeroSecond(date: Date) -> Date {
+    func dateByZeroSecond(date: Date) -> Date {
         var calendar = Calendar(identifier: Calendar.Identifier.gregorian)
         
         calendar.timeZone = .current
@@ -30,18 +30,21 @@ public extension Date {
         return dateFormatter.date(from: dateString)!
     }
     
-    public func cleanNanosecond() -> Date {
+    func cleanNanosecond() -> Date {
         
         let calendar = Calendar(identifier: Calendar.Identifier.gregorian)
         
-        var components = (calendar as NSCalendar?)?.components([.year, .month, .day, .hour, .minute, .second], from: self)
+        if var components = (calendar as NSCalendar?)?.components([.year, .month, .day, .hour, .minute, .second], from: self) {
+            
+            components.nanosecond = 0
+            
+            return calendar.date(from: components) ?? self
+        }
         
-        components?.nanosecond = 0
-        
-        return calendar.date(from: components!) as! Date
+        return self
     }
     
-    public func string(format: String) -> String? {
+    func string(format: String) -> String? {
         let dateFormatter = DateFormatter()
         
         dateFormatter.dateFormat = format
