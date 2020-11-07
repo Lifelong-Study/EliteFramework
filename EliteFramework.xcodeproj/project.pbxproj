@@ -79,96 +79,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D8251EC91C9E0968005C1C39 /* NSDate */ = {
-			isa = PBXGroup;
-			children = (
-				D8251ECA1C9E0968005C1C39 /* EliteDate.h */,
-				D8251ECB1C9E0968005C1C39 /* EliteDate.m */,
-			);
-			path = NSDate;
-			sourceTree = "<group>";
-		};
-		D83757D61BDA0C8D0076B94B /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				D83757D71BDA0C8D0076B94B /* EliteConfig.h */,
-				D83757D81BDA0C8D0076B94B /* EliteConfig.m */,
-			);
-			path = Config;
-			sourceTree = "<group>";
-		};
-		D83943681BE0B9C000EA65BC /* UIDevice */ = {
-			isa = PBXGroup;
-			children = (
-				D83943691BE0B9C000EA65BC /* EliteDevice.h */,
-				D839436A1BE0B9C000EA65BC /* EliteDevice.m */,
-			);
-			path = UIDevice;
-			sourceTree = "<group>";
-		};
-		D8995C2C1C789546000A219A /* NSArray */ = {
-			isa = PBXGroup;
-			children = (
-				D8995C2D1C789557000A219A /* EliteArray.h */,
-				D8995C2E1C789557000A219A /* EliteArray.m */,
-			);
-			path = NSArray;
-			sourceTree = "<group>";
-		};
-		D89A5B731BC26B7A0029AE93 /* NSData */ = {
-			isa = PBXGroup;
-			children = (
-				D89A5B741BC26B7A0029AE93 /* EliteData.h */,
-				D89A5B751BC26B7A0029AE93 /* EliteData.m */,
-			);
-			path = NSData;
-			sourceTree = "<group>";
-		};
-		D8B7759D1CA131FB009C6854 /* UIView */ = {
-			isa = PBXGroup;
-			children = (
-				D8B7759E1CA131FB009C6854 /* EliteView.h */,
-				D8B7759F1CA131FB009C6854 /* EliteView.m */,
-			);
-			path = UIView;
-			sourceTree = "<group>";
-		};
-		D8B775A21CA1325B009C6854 /* CALayer */ = {
-			isa = PBXGroup;
-			children = (
-				D8B775A31CA1325B009C6854 /* EliteLayer.h */,
-				D8B775A41CA1325B009C6854 /* EliteLayer.m */,
-			);
-			path = CALayer;
-			sourceTree = "<group>";
-		};
-		D8B775A71CA13261009C6854 /* UIViewController */ = {
-			isa = PBXGroup;
-			children = (
-				D8B775A81CA13261009C6854 /* EliteViewController.h */,
-				D8B775A91CA13261009C6854 /* EliteViewController.m */,
-			);
-			path = UIViewController;
-			sourceTree = "<group>";
-		};
-		D8B775AC1CA13268009C6854 /* UIColor */ = {
-			isa = PBXGroup;
-			children = (
-				D8B775AD1CA13268009C6854 /* EliteColor.h */,
-				D8B775AE1CA13268009C6854 /* EliteColor.m */,
-			);
-			path = UIColor;
-			sourceTree = "<group>";
-		};
-		D8B775B11CA136BB009C6854 /* NSLayoutConstraint */ = {
-			isa = PBXGroup;
-			children = (
-				D8B775B21CA136C7009C6854 /* EliteLayoutConstraint.h */,
-				D8B775B31CA136C7009C6854 /* EliteLayoutConstraint.m */,
-			);
-			path = NSLayoutConstraint;
-			sourceTree = "<group>";
-		};
 		E34FBEE81B8AB56F00043CCD = {
 			isa = PBXGroup;
 			children = (
@@ -189,19 +99,32 @@
 			isa = PBXGroup;
 			children = (
 				E34FBEF71B8AB56F00043CCD /* EliteFramework.h */,
-				D8B775A21CA1325B009C6854 /* CALayer */,
-				D83757D61BDA0C8D0076B94B /* Config */,
-				D8B7759D1CA131FB009C6854 /* UIView */,
-				D8B775AC1CA13268009C6854 /* UIColor */,
-				E3F3AEC61BFB1A37009B35CC /* Math */,
-				D8995C2C1C789546000A219A /* NSArray */,
-				D89A5B731BC26B7A0029AE93 /* NSData */,
-				D8251EC91C9E0968005C1C39 /* NSDate */,
-				E34FBF111B8ABA7200043CCD /* NSString */,
-				D83943681BE0B9C000EA65BC /* UIDevice */,
-				E34FBF141B8ABA7200043CCD /* UIImage */,
-				D8B775A71CA13261009C6854 /* UIViewController */,
-				D8B775B11CA136BB009C6854 /* NSLayoutConstraint */,
+				D8B775A31CA1325B009C6854 /* EliteLayer.h */,
+				D8B775A41CA1325B009C6854 /* EliteLayer.m */,
+				D83757D71BDA0C8D0076B94B /* EliteConfig.h */,
+				D83757D81BDA0C8D0076B94B /* EliteConfig.m */,
+				D8B7759E1CA131FB009C6854 /* EliteView.h */,
+				D8B7759F1CA131FB009C6854 /* EliteView.m */,
+				D8B775AD1CA13268009C6854 /* EliteColor.h */,
+				D8B775AE1CA13268009C6854 /* EliteColor.m */,
+				E3F3AEC71BFB1A37009B35CC /* EliteMath.h */,
+				E3F3AEC81BFB1A37009B35CC /* EliteMath.m */,
+				D8995C2D1C789557000A219A /* EliteArray.h */,
+				D8995C2E1C789557000A219A /* EliteArray.m */,
+				D89A5B741BC26B7A0029AE93 /* EliteData.h */,
+				D89A5B751BC26B7A0029AE93 /* EliteData.m */,
+				D8251ECA1C9E0968005C1C39 /* EliteDate.h */,
+				D8251ECB1C9E0968005C1C39 /* EliteDate.m */,
+				E34FBF121B8ABA7200043CCD /* EliteString.h */,
+				E34FBF131B8ABA7200043CCD /* EliteString.m */,
+				D83943691BE0B9C000EA65BC /* EliteDevice.h */,
+				D839436A1BE0B9C000EA65BC /* EliteDevice.m */,
+				E34FBF151B8ABA7200043CCD /* EliteImage.h */,
+				E34FBF161B8ABA7200043CCD /* EliteImage.m */,
+				D8B775A81CA13261009C6854 /* EliteViewController.h */,
+				D8B775A91CA13261009C6854 /* EliteViewController.m */,
+				D8B775B21CA136C7009C6854 /* EliteLayoutConstraint.h */,
+				D8B775B31CA136C7009C6854 /* EliteLayoutConstraint.m */,
 				E34FBEF51B8AB56F00043CCD /* Supporting Files */,
 			);
 			path = EliteFramework;
@@ -213,33 +136,6 @@
 				E34FBEF61B8AB56F00043CCD /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E34FBF111B8ABA7200043CCD /* NSString */ = {
-			isa = PBXGroup;
-			children = (
-				E34FBF121B8ABA7200043CCD /* EliteString.h */,
-				E34FBF131B8ABA7200043CCD /* EliteString.m */,
-			);
-			path = NSString;
-			sourceTree = "<group>";
-		};
-		E34FBF141B8ABA7200043CCD /* UIImage */ = {
-			isa = PBXGroup;
-			children = (
-				E34FBF151B8ABA7200043CCD /* EliteImage.h */,
-				E34FBF161B8ABA7200043CCD /* EliteImage.m */,
-			);
-			path = UIImage;
-			sourceTree = "<group>";
-		};
-		E3F3AEC61BFB1A37009B35CC /* Math */ = {
-			isa = PBXGroup;
-			children = (
-				E3F3AEC71BFB1A37009B35CC /* EliteMath.h */,
-				E3F3AEC81BFB1A37009B35CC /* EliteMath.m */,
-			);
-			path = Math;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
