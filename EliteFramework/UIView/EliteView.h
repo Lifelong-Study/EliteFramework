@@ -14,8 +14,8 @@
 
 @interface EliteViewManager : NSObject
 
-- (void)showAlertView:(NSString *)title buttonTitle:(NSString *)buttonTitle;
-- (void)showAlertView:(NSString *)title message:(NSString *)message buttonTitle:(NSString *)buttonTitle;
+//- (void)showAlertView:(NSString *)title buttonTitle:(NSString *)buttonTitle;
+//- (void)showAlertView:(NSString *)title message:(NSString *)message buttonTitle:(NSString *)buttonTitle;
 
 + (EliteViewManager *)sharedInstance;
 

@@ -6,9 +6,9 @@
 //  Copyright © 2016年 Lifelong-Study. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+//#import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "EliteConfig.h"
+#import <EliteConfig.h>
 
 @interface CALayer (EliteLayerCategory)
 

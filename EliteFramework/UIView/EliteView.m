@@ -11,21 +11,21 @@
 
 @implementation EliteViewManager
 
-- (void)showAlertView:(NSString *)title buttonTitle:(NSString *)buttonTitle
-{
-    [self showAlertView:title message:nil buttonTitle:buttonTitle];
-}
-
-- (void)showAlertView:(NSString *)title message:(NSString *)message buttonTitle:(NSString *)buttonTitle
-{
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
-                                                        message:message
-                                                       delegate:nil
-                                              cancelButtonTitle:buttonTitle
-                                              otherButtonTitles:nil];
-    
-    [alertView show];
-}
+//- (void)showAlertView:(NSString *)title buttonTitle:(NSString *)buttonTitle
+//{
+//    [self showAlertView:title message:nil buttonTitle:buttonTitle];
+//}
+//
+//- (void)showAlertView:(NSString *)title message:(NSString *)message buttonTitle:(NSString *)buttonTitle
+//{
+//    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
+//                                                        message:message
+//                                                       delegate:nil
+//                                              cancelButtonTitle:buttonTitle
+//                                              otherButtonTitles:nil];
+//    
+//    [alertView show];
+//}
 
 + (EliteViewManager *)sharedInstance
 {
