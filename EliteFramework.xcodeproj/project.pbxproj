@@ -6,20 +6,6 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		E34FBF221B8ABAD900043CCD /* Target */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = E34FBF231B8ABAD900043CCD /* Build configuration list for PBXAggregateTarget "Target" */;
-			buildPhases = (
-				E34FBF261B8ABADF00043CCD /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = Target;
-			productName = Target;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		D8251ECC1C9E0968005C1C39 /* EliteDate.h in Headers */ = {isa = PBXBuildFile; fileRef = D8251ECA1C9E0968005C1C39 /* EliteDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D8251ECD1C9E0968005C1C39 /* EliteDate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8251ECB1C9E0968005C1C39 /* EliteDate.m */; };
@@ -313,9 +299,6 @@
 					E34FBEF11B8AB56F00043CCD = {
 						CreatedOnToolsVersion = 6.4;
 					};
-					E34FBF221B8ABAD900043CCD = {
-						CreatedOnToolsVersion = 6.4;
-					};
 				};
 			};
 			buildConfigurationList = E34FBEEC1B8AB56F00043CCD /* Build configuration list for PBXProject "EliteFramework" */;
@@ -332,7 +315,6 @@
 			projectRoot = "";
 			targets = (
 				E34FBEF11B8AB56F00043CCD /* EliteFramework */,
-				E34FBF221B8ABAD900043CCD /* Target */,
 			);
 		};
 /* End PBXProject section */
@@ -346,22 +328,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		E34FBF261B8ABADF00043CCD /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Sets the target folders and the final framework product.\n# 如果工程名称和Framework的Target名称不一样的话，要自定义FMKNAME\n# 例如: FMK_NAME = \"MyFramework\"\nFMK_NAME=${PROJECT_NAME}\n\n# Install dir will be the final output to the framework.\n# The following line create it in the root folder of the current project.\nINSTALL_DIR=${SRCROOT}/Products/${FMK_NAME}.framework\n\n# Working dir will be deleted after the framework creation.\nWRK_DIR=build\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.framework\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator/${FMK_NAME}.framework\n\n# -configuration ${CONFIGURATION}\n# Clean and Building both architectures.\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphoneos clean build\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphonesimulator clean build\n\n# Cleaning the oldest.\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\n\nmkdir -p \"${INSTALL_DIR}\"\n\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n\n# Uses the Lipo Tool to merge both binary files (i386 + armv6/armv7) into one Universal final product.\nlipo -create \"${DEVICE_DIR}/${FMK_NAME}\" \"${SIMULATOR_DIR}/${FMK_NAME}\" -output \"${INSTALL_DIR}/${FMK_NAME}\"\n\nrm -r \"${WRK_DIR}\"\n\n open \"${INSTALL_DIR}\"";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E34FBEED1B8AB56F00043CCD /* Sources */ = {
@@ -538,20 +504,6 @@
 			};
 			name = Release;
 		};
-		E34FBF241B8ABAD900043CCD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		E34FBF251B8ABAD900043CCD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -569,15 +521,6 @@
 			buildConfigurations = (
 				E34FBF091B8AB57000043CCD /* Debug */,
 				E34FBF0A1B8AB57000043CCD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E34FBF231B8ABAD900043CCD /* Build configuration list for PBXAggregateTarget "Target" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E34FBF241B8ABAD900043CCD /* Debug */,
-				E34FBF251B8ABAD900043CCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
