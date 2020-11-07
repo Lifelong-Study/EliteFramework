@@ -1,0 +1,6 @@
+use_frameworks!
+target 'EliteFramework_Tests' do
+  pod 'EliteFramework', :path => '../'
+  
+  
+end

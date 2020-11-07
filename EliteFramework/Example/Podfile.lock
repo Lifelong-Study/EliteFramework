@@ -1,0 +1,16 @@
+PODS:
+  - EliteFramework (0.1.0)
+
+DEPENDENCIES:
+  - EliteFramework (from `../`)
+
+EXTERNAL SOURCES:
+  EliteFramework:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  EliteFramework: 0b686980ef6d36149c483bc6d62c67e5e9e612a1
+
+PODFILE CHECKSUM: a50fcf462528c975c9ea596251f3f23e0d8da294
+
+COCOAPODS: 1.10.0

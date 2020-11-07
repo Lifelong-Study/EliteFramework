@@ -10,6 +10,19 @@
 #import <UIKit/UIKit.h>
 #import "EliteConfig.h"
 
+#define Elite       [EliteViewManager sharedInstance]
+
+@interface EliteViewManager : NSObject
+
+- (void)showAlertView:(NSString *)title buttonTitle:(NSString *)buttonTitle;
+- (void)showAlertView:(NSString *)title message:(NSString *)message buttonTitle:(NSString *)buttonTitle;
+
++ (EliteViewManager *)sharedInstance;
+
+@end
+
+
+
 @interface UIView (EliteViewCategory)
 
 // 設置漸層效果
