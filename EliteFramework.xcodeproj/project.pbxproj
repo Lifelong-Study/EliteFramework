@@ -7,32 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D8251ECC1C9E0968005C1C39 /* EliteDate.h in Headers */ = {isa = PBXBuildFile; fileRef = D8251ECA1C9E0968005C1C39 /* EliteDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D8251ECD1C9E0968005C1C39 /* EliteDate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8251ECB1C9E0968005C1C39 /* EliteDate.m */; };
-		D83757D91BDA0C8D0076B94B /* EliteConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = D83757D71BDA0C8D0076B94B /* EliteConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D83757DA1BDA0C8D0076B94B /* EliteConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D83757D81BDA0C8D0076B94B /* EliteConfig.m */; };
-		D839436B1BE0B9C000EA65BC /* EliteDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = D83943691BE0B9C000EA65BC /* EliteDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D839436C1BE0B9C000EA65BC /* EliteDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = D839436A1BE0B9C000EA65BC /* EliteDevice.m */; };
-		D8995C2F1C789557000A219A /* EliteArray.h in Headers */ = {isa = PBXBuildFile; fileRef = D8995C2D1C789557000A219A /* EliteArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D841EA83255705230000738B /* EliteLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = D8B775A31CA1325B009C6854 /* EliteLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D841EA84255705230000738B /* EliteConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = D83757D71BDA0C8D0076B94B /* EliteConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D841EA85255705230000738B /* EliteView.h in Headers */ = {isa = PBXBuildFile; fileRef = D8B7759E1CA131FB009C6854 /* EliteView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D841EA86255705230000738B /* EliteColor.h in Headers */ = {isa = PBXBuildFile; fileRef = D8B775AD1CA13268009C6854 /* EliteColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D841EA87255705230000738B /* EliteMath.h in Headers */ = {isa = PBXBuildFile; fileRef = E3F3AEC71BFB1A37009B35CC /* EliteMath.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D841EA88255705230000738B /* EliteArray.h in Headers */ = {isa = PBXBuildFile; fileRef = D8995C2D1C789557000A219A /* EliteArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D841EA89255705230000738B /* EliteData.h in Headers */ = {isa = PBXBuildFile; fileRef = D89A5B741BC26B7A0029AE93 /* EliteData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D841EA8A255705230000738B /* EliteDate.h in Headers */ = {isa = PBXBuildFile; fileRef = D8251ECA1C9E0968005C1C39 /* EliteDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D841EA8B255705230000738B /* EliteString.h in Headers */ = {isa = PBXBuildFile; fileRef = E34FBF121B8ABA7200043CCD /* EliteString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D841EA8C255705230000738B /* EliteDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = D83943691BE0B9C000EA65BC /* EliteDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D841EA8D255705230000738B /* EliteImage.h in Headers */ = {isa = PBXBuildFile; fileRef = E34FBF151B8ABA7200043CCD /* EliteImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D841EA8E255705230000738B /* EliteViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D8B775A81CA13261009C6854 /* EliteViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D841EA8F255705230000738B /* EliteLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = D8B775B21CA136C7009C6854 /* EliteLayoutConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D8995C301C789557000A219A /* EliteArray.m in Sources */ = {isa = PBXBuildFile; fileRef = D8995C2E1C789557000A219A /* EliteArray.m */; };
-		D89A5B761BC26B7A0029AE93 /* EliteData.h in Headers */ = {isa = PBXBuildFile; fileRef = D89A5B741BC26B7A0029AE93 /* EliteData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D89A5B771BC26B7A0029AE93 /* EliteData.m in Sources */ = {isa = PBXBuildFile; fileRef = D89A5B751BC26B7A0029AE93 /* EliteData.m */; };
-		D8B775A01CA131FB009C6854 /* EliteView.h in Headers */ = {isa = PBXBuildFile; fileRef = D8B7759E1CA131FB009C6854 /* EliteView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D8B775A11CA131FB009C6854 /* EliteView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B7759F1CA131FB009C6854 /* EliteView.m */; };
-		D8B775A51CA1325B009C6854 /* EliteLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = D8B775A31CA1325B009C6854 /* EliteLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D8B775A61CA1325B009C6854 /* EliteLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B775A41CA1325B009C6854 /* EliteLayer.m */; };
-		D8B775AA1CA13261009C6854 /* EliteViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D8B775A81CA13261009C6854 /* EliteViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D8B775AB1CA13261009C6854 /* EliteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B775A91CA13261009C6854 /* EliteViewController.m */; };
-		D8B775AF1CA13268009C6854 /* EliteColor.h in Headers */ = {isa = PBXBuildFile; fileRef = D8B775AD1CA13268009C6854 /* EliteColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D8B775B01CA13268009C6854 /* EliteColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B775AE1CA13268009C6854 /* EliteColor.m */; };
-		D8B775B41CA136C7009C6854 /* EliteLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = D8B775B21CA136C7009C6854 /* EliteLayoutConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D8B775B51CA136C7009C6854 /* EliteLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B775B31CA136C7009C6854 /* EliteLayoutConstraint.m */; };
 		E34FBEF81B8AB56F00043CCD /* EliteFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = E34FBEF71B8AB56F00043CCD /* EliteFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E34FBF1C1B8ABA7200043CCD /* EliteString.h in Headers */ = {isa = PBXBuildFile; fileRef = E34FBF121B8ABA7200043CCD /* EliteString.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E34FBF1D1B8ABA7200043CCD /* EliteString.m in Sources */ = {isa = PBXBuildFile; fileRef = E34FBF131B8ABA7200043CCD /* EliteString.m */; };
-		E34FBF1E1B8ABA7200043CCD /* EliteImage.h in Headers */ = {isa = PBXBuildFile; fileRef = E34FBF151B8ABA7200043CCD /* EliteImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E34FBF1F1B8ABA7200043CCD /* EliteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E34FBF161B8ABA7200043CCD /* EliteImage.m */; };
-		E3F3AEC91BFB1A37009B35CC /* EliteMath.h in Headers */ = {isa = PBXBuildFile; fileRef = E3F3AEC71BFB1A37009B35CC /* EliteMath.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E3F3AECA1BFB1A37009B35CC /* EliteMath.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F3AEC81BFB1A37009B35CC /* EliteMath.m */; };
 /* End PBXBuildFile section */
 
@@ -250,19 +250,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				E34FBEF81B8AB56F00043CCD /* EliteFramework.h in Headers */,
-				D8995C2F1C789557000A219A /* EliteArray.h in Headers */,
-				D83757D91BDA0C8D0076B94B /* EliteConfig.h in Headers */,
-				D89A5B761BC26B7A0029AE93 /* EliteData.h in Headers */,
-				D8B775AA1CA13261009C6854 /* EliteViewController.h in Headers */,
-				D8B775AF1CA13268009C6854 /* EliteColor.h in Headers */,
-				D8251ECC1C9E0968005C1C39 /* EliteDate.h in Headers */,
-				D8B775A01CA131FB009C6854 /* EliteView.h in Headers */,
-				D8B775A51CA1325B009C6854 /* EliteLayer.h in Headers */,
-				D8B775B41CA136C7009C6854 /* EliteLayoutConstraint.h in Headers */,
-				D839436B1BE0B9C000EA65BC /* EliteDevice.h in Headers */,
-				E34FBF1E1B8ABA7200043CCD /* EliteImage.h in Headers */,
-				E3F3AEC91BFB1A37009B35CC /* EliteMath.h in Headers */,
-				E34FBF1C1B8ABA7200043CCD /* EliteString.h in Headers */,
+				D841EA83255705230000738B /* EliteLayer.h in Headers */,
+				D841EA84255705230000738B /* EliteConfig.h in Headers */,
+				D841EA85255705230000738B /* EliteView.h in Headers */,
+				D841EA86255705230000738B /* EliteColor.h in Headers */,
+				D841EA87255705230000738B /* EliteMath.h in Headers */,
+				D841EA88255705230000738B /* EliteArray.h in Headers */,
+				D841EA89255705230000738B /* EliteData.h in Headers */,
+				D841EA8A255705230000738B /* EliteDate.h in Headers */,
+				D841EA8B255705230000738B /* EliteString.h in Headers */,
+				D841EA8C255705230000738B /* EliteDevice.h in Headers */,
+				D841EA8D255705230000738B /* EliteImage.h in Headers */,
+				D841EA8E255705230000738B /* EliteViewController.h in Headers */,
+				D841EA8F255705230000738B /* EliteLayoutConstraint.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
