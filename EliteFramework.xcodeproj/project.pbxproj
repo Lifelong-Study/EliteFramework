@@ -7,60 +7,83 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		D87C9D901D053F2B00EFBA8F /* Target-Release */ = {
+		E34FBF221B8ABAD900043CCD /* Target */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = D87C9D911D053F2B00EFBA8F /* Build configuration list for PBXAggregateTarget "Target-Release" */;
+			buildConfigurationList = E34FBF231B8ABAD900043CCD /* Build configuration list for PBXAggregateTarget "Target" */;
 			buildPhases = (
-				D87C9D941D053F4300EFBA8F /* ShellScript */,
+				E34FBF261B8ABADF00043CCD /* ShellScript */,
 			);
 			dependencies = (
 			);
-			name = "Target-Release";
-			productName = "Target-Release";
-		};
-		D8E9DC931C23055B00764801 /* Target-Simulator */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = D8E9DC941C23055B00764801 /* Build configuration list for PBXAggregateTarget "Target-Simulator" */;
-			buildPhases = (
-				D8E9DC971C23056000764801 /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = "Target-Simulator";
+			name = Target;
 			productName = Target;
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		10D1135121BA3F52004E6591 /* XIBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D1135021BA3F52004E6591 /* XIBView.swift */; };
-		D812AA7B1C734C9D003A6C28 /* EliteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D812AA7A1C734C9D003A6C28 /* EliteViewController.swift */; };
-		D81B56B31CF8C0020044E6DF /* EliteLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81B56B21CF8C0020044E6DF /* EliteLayoutConstraint.swift */; };
-		D83C26291C712036000FC007 /* EliteString.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83C26281C712036000FC007 /* EliteString.swift */; };
-		D853307A1D9B410F006C965C /* EliteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85330791D9B410F006C965C /* EliteView.swift */; };
-		D867BF6C1C70BAB40023B6E2 /* EliteColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E9DC911C2301A700764801 /* EliteColor.swift */; };
-		D867BF6D1C70BAB40023B6E2 /* EliteLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D867BF5A1C70A3AB0023B6E2 /* EliteLayer.swift */; };
-		D87963CB1C85D75A00F8ADB7 /* EliteAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87963CA1C85D75A00F8ADB7 /* EliteAttributedString.swift */; };
-		D88FA4981C86315C00C02B3E /* EliteDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FA4971C86315C00C02B3E /* EliteDate.swift */; };
-		D891AFA51C90290E004BC0AA /* EliteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D891AFA41C90290E004BC0AA /* EliteImage.swift */; };
+		D8251ECC1C9E0968005C1C39 /* EliteDate.h in Headers */ = {isa = PBXBuildFile; fileRef = D8251ECA1C9E0968005C1C39 /* EliteDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8251ECD1C9E0968005C1C39 /* EliteDate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8251ECB1C9E0968005C1C39 /* EliteDate.m */; };
+		D83757D91BDA0C8D0076B94B /* EliteConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = D83757D71BDA0C8D0076B94B /* EliteConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D83757DA1BDA0C8D0076B94B /* EliteConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D83757D81BDA0C8D0076B94B /* EliteConfig.m */; };
+		D839436B1BE0B9C000EA65BC /* EliteDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = D83943691BE0B9C000EA65BC /* EliteDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D839436C1BE0B9C000EA65BC /* EliteDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = D839436A1BE0B9C000EA65BC /* EliteDevice.m */; };
+		D8995C2F1C789557000A219A /* EliteArray.h in Headers */ = {isa = PBXBuildFile; fileRef = D8995C2D1C789557000A219A /* EliteArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8995C301C789557000A219A /* EliteArray.m in Sources */ = {isa = PBXBuildFile; fileRef = D8995C2E1C789557000A219A /* EliteArray.m */; };
+		D89A5B761BC26B7A0029AE93 /* EliteData.h in Headers */ = {isa = PBXBuildFile; fileRef = D89A5B741BC26B7A0029AE93 /* EliteData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D89A5B771BC26B7A0029AE93 /* EliteData.m in Sources */ = {isa = PBXBuildFile; fileRef = D89A5B751BC26B7A0029AE93 /* EliteData.m */; };
+		D8B775A01CA131FB009C6854 /* EliteView.h in Headers */ = {isa = PBXBuildFile; fileRef = D8B7759E1CA131FB009C6854 /* EliteView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8B775A11CA131FB009C6854 /* EliteView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B7759F1CA131FB009C6854 /* EliteView.m */; };
+		D8B775A51CA1325B009C6854 /* EliteLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = D8B775A31CA1325B009C6854 /* EliteLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8B775A61CA1325B009C6854 /* EliteLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B775A41CA1325B009C6854 /* EliteLayer.m */; };
+		D8B775AA1CA13261009C6854 /* EliteViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D8B775A81CA13261009C6854 /* EliteViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8B775AB1CA13261009C6854 /* EliteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B775A91CA13261009C6854 /* EliteViewController.m */; };
+		D8B775AF1CA13268009C6854 /* EliteColor.h in Headers */ = {isa = PBXBuildFile; fileRef = D8B775AD1CA13268009C6854 /* EliteColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8B775B01CA13268009C6854 /* EliteColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B775AE1CA13268009C6854 /* EliteColor.m */; };
+		D8B775B41CA136C7009C6854 /* EliteLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = D8B775B21CA136C7009C6854 /* EliteLayoutConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8B775B51CA136C7009C6854 /* EliteLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B775B31CA136C7009C6854 /* EliteLayoutConstraint.m */; };
+		E34FBEF81B8AB56F00043CCD /* EliteFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = E34FBEF71B8AB56F00043CCD /* EliteFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E34FBF1C1B8ABA7200043CCD /* EliteString.h in Headers */ = {isa = PBXBuildFile; fileRef = E34FBF121B8ABA7200043CCD /* EliteString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E34FBF1D1B8ABA7200043CCD /* EliteString.m in Sources */ = {isa = PBXBuildFile; fileRef = E34FBF131B8ABA7200043CCD /* EliteString.m */; };
+		E34FBF1E1B8ABA7200043CCD /* EliteImage.h in Headers */ = {isa = PBXBuildFile; fileRef = E34FBF151B8ABA7200043CCD /* EliteImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E34FBF1F1B8ABA7200043CCD /* EliteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E34FBF161B8ABA7200043CCD /* EliteImage.m */; };
+		E3F3AEC91BFB1A37009B35CC /* EliteMath.h in Headers */ = {isa = PBXBuildFile; fileRef = E3F3AEC71BFB1A37009B35CC /* EliteMath.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E3F3AECA1BFB1A37009B35CC /* EliteMath.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F3AEC81BFB1A37009B35CC /* EliteMath.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		10D1135021BA3F52004E6591 /* XIBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIBView.swift; sourceTree = "<group>"; };
-		D812AA7A1C734C9D003A6C28 /* EliteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EliteViewController.swift; sourceTree = "<group>"; };
-		D81B56B21CF8C0020044E6DF /* EliteLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EliteLayoutConstraint.swift; sourceTree = "<group>"; };
-		D83C26281C712036000FC007 /* EliteString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EliteString.swift; sourceTree = "<group>"; };
-		D85330791D9B410F006C965C /* EliteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EliteView.swift; sourceTree = "<group>"; };
-		D867BF5A1C70A3AB0023B6E2 /* EliteLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EliteLayer.swift; sourceTree = "<group>"; };
-		D87963CA1C85D75A00F8ADB7 /* EliteAttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EliteAttributedString.swift; sourceTree = "<group>"; };
-		D88FA4971C86315C00C02B3E /* EliteDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EliteDate.swift; sourceTree = "<group>"; };
-		D891AFA41C90290E004BC0AA /* EliteImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EliteImage.swift; sourceTree = "<group>"; };
-		D8E9DC811C23015F00764801 /* EliteFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EliteFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D8E9DC861C23015F00764801 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D8E9DC911C2301A700764801 /* EliteColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EliteColor.swift; path = EliteFramework/EliteColor.swift; sourceTree = SOURCE_ROOT; };
+		D8251ECA1C9E0968005C1C39 /* EliteDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EliteDate.h; sourceTree = "<group>"; };
+		D8251ECB1C9E0968005C1C39 /* EliteDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EliteDate.m; sourceTree = "<group>"; };
+		D83757D71BDA0C8D0076B94B /* EliteConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EliteConfig.h; sourceTree = "<group>"; };
+		D83757D81BDA0C8D0076B94B /* EliteConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EliteConfig.m; sourceTree = "<group>"; };
+		D83943691BE0B9C000EA65BC /* EliteDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EliteDevice.h; sourceTree = "<group>"; };
+		D839436A1BE0B9C000EA65BC /* EliteDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EliteDevice.m; sourceTree = "<group>"; };
+		D8995C2D1C789557000A219A /* EliteArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EliteArray.h; sourceTree = "<group>"; };
+		D8995C2E1C789557000A219A /* EliteArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EliteArray.m; sourceTree = "<group>"; };
+		D89A5B741BC26B7A0029AE93 /* EliteData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EliteData.h; sourceTree = "<group>"; };
+		D89A5B751BC26B7A0029AE93 /* EliteData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EliteData.m; sourceTree = "<group>"; };
+		D8B7759E1CA131FB009C6854 /* EliteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EliteView.h; sourceTree = "<group>"; };
+		D8B7759F1CA131FB009C6854 /* EliteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EliteView.m; sourceTree = "<group>"; };
+		D8B775A31CA1325B009C6854 /* EliteLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EliteLayer.h; sourceTree = "<group>"; };
+		D8B775A41CA1325B009C6854 /* EliteLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EliteLayer.m; sourceTree = "<group>"; };
+		D8B775A81CA13261009C6854 /* EliteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EliteViewController.h; sourceTree = "<group>"; };
+		D8B775A91CA13261009C6854 /* EliteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EliteViewController.m; sourceTree = "<group>"; };
+		D8B775AD1CA13268009C6854 /* EliteColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EliteColor.h; sourceTree = "<group>"; };
+		D8B775AE1CA13268009C6854 /* EliteColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EliteColor.m; sourceTree = "<group>"; };
+		D8B775B21CA136C7009C6854 /* EliteLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EliteLayoutConstraint.h; sourceTree = "<group>"; };
+		D8B775B31CA136C7009C6854 /* EliteLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EliteLayoutConstraint.m; sourceTree = "<group>"; };
+		E34FBEF21B8AB56F00043CCD /* EliteFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EliteFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E34FBEF61B8AB56F00043CCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E34FBEF71B8AB56F00043CCD /* EliteFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EliteFramework.h; sourceTree = "<group>"; };
+		E34FBF121B8ABA7200043CCD /* EliteString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EliteString.h; sourceTree = "<group>"; };
+		E34FBF131B8ABA7200043CCD /* EliteString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EliteString.m; sourceTree = "<group>"; };
+		E34FBF151B8ABA7200043CCD /* EliteImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EliteImage.h; sourceTree = "<group>"; };
+		E34FBF161B8ABA7200043CCD /* EliteImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EliteImage.m; sourceTree = "<group>"; };
+		E3F3AEC71BFB1A37009B35CC /* EliteMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EliteMath.h; sourceTree = "<group>"; };
+		E3F3AEC81BFB1A37009B35CC /* EliteMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EliteMath.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D8E9DC7D1C23015F00764801 /* Frameworks */ = {
+		E34FBEEE1B8AB56F00043CCD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -70,61 +93,204 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D8E9DC771C23015F00764801 = {
+		D8251EC91C9E0968005C1C39 /* NSDate */ = {
 			isa = PBXGroup;
 			children = (
-				D8E9DC831C23015F00764801 /* EliteFramework */,
-				D8E9DC821C23015F00764801 /* Products */,
+				D8251ECA1C9E0968005C1C39 /* EliteDate.h */,
+				D8251ECB1C9E0968005C1C39 /* EliteDate.m */,
+			);
+			path = NSDate;
+			sourceTree = "<group>";
+		};
+		D83757D61BDA0C8D0076B94B /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				D83757D71BDA0C8D0076B94B /* EliteConfig.h */,
+				D83757D81BDA0C8D0076B94B /* EliteConfig.m */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		D83943681BE0B9C000EA65BC /* UIDevice */ = {
+			isa = PBXGroup;
+			children = (
+				D83943691BE0B9C000EA65BC /* EliteDevice.h */,
+				D839436A1BE0B9C000EA65BC /* EliteDevice.m */,
+			);
+			path = UIDevice;
+			sourceTree = "<group>";
+		};
+		D8995C2C1C789546000A219A /* NSArray */ = {
+			isa = PBXGroup;
+			children = (
+				D8995C2D1C789557000A219A /* EliteArray.h */,
+				D8995C2E1C789557000A219A /* EliteArray.m */,
+			);
+			path = NSArray;
+			sourceTree = "<group>";
+		};
+		D89A5B731BC26B7A0029AE93 /* NSData */ = {
+			isa = PBXGroup;
+			children = (
+				D89A5B741BC26B7A0029AE93 /* EliteData.h */,
+				D89A5B751BC26B7A0029AE93 /* EliteData.m */,
+			);
+			path = NSData;
+			sourceTree = "<group>";
+		};
+		D8B7759D1CA131FB009C6854 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				D8B7759E1CA131FB009C6854 /* EliteView.h */,
+				D8B7759F1CA131FB009C6854 /* EliteView.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		D8B775A21CA1325B009C6854 /* CALayer */ = {
+			isa = PBXGroup;
+			children = (
+				D8B775A31CA1325B009C6854 /* EliteLayer.h */,
+				D8B775A41CA1325B009C6854 /* EliteLayer.m */,
+			);
+			path = CALayer;
+			sourceTree = "<group>";
+		};
+		D8B775A71CA13261009C6854 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D8B775A81CA13261009C6854 /* EliteViewController.h */,
+				D8B775A91CA13261009C6854 /* EliteViewController.m */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		D8B775AC1CA13268009C6854 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				D8B775AD1CA13268009C6854 /* EliteColor.h */,
+				D8B775AE1CA13268009C6854 /* EliteColor.m */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		D8B775B11CA136BB009C6854 /* NSLayoutConstraint */ = {
+			isa = PBXGroup;
+			children = (
+				D8B775B21CA136C7009C6854 /* EliteLayoutConstraint.h */,
+				D8B775B31CA136C7009C6854 /* EliteLayoutConstraint.m */,
+			);
+			path = NSLayoutConstraint;
+			sourceTree = "<group>";
+		};
+		E34FBEE81B8AB56F00043CCD = {
+			isa = PBXGroup;
+			children = (
+				E34FBEF41B8AB56F00043CCD /* EliteFramework */,
+				E34FBEF31B8AB56F00043CCD /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		D8E9DC821C23015F00764801 /* Products */ = {
+		E34FBEF31B8AB56F00043CCD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D8E9DC811C23015F00764801 /* EliteFramework.framework */,
+				E34FBEF21B8AB56F00043CCD /* EliteFramework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D8E9DC831C23015F00764801 /* EliteFramework */ = {
+		E34FBEF41B8AB56F00043CCD /* EliteFramework */ = {
 			isa = PBXGroup;
 			children = (
-				D8E9DC911C2301A700764801 /* EliteColor.swift */,
-				D867BF5A1C70A3AB0023B6E2 /* EliteLayer.swift */,
-				D83C26281C712036000FC007 /* EliteString.swift */,
-				D85330791D9B410F006C965C /* EliteView.swift */,
-				D812AA7A1C734C9D003A6C28 /* EliteViewController.swift */,
-				D87963CA1C85D75A00F8ADB7 /* EliteAttributedString.swift */,
-				D88FA4971C86315C00C02B3E /* EliteDate.swift */,
-				D891AFA41C90290E004BC0AA /* EliteImage.swift */,
-				D81B56B21CF8C0020044E6DF /* EliteLayoutConstraint.swift */,
-				10D1135021BA3F52004E6591 /* XIBView.swift */,
-				D8E9DC861C23015F00764801 /* Info.plist */,
+				E34FBEF71B8AB56F00043CCD /* EliteFramework.h */,
+				D8B775A21CA1325B009C6854 /* CALayer */,
+				D83757D61BDA0C8D0076B94B /* Config */,
+				D8B7759D1CA131FB009C6854 /* UIView */,
+				D8B775AC1CA13268009C6854 /* UIColor */,
+				E3F3AEC61BFB1A37009B35CC /* Math */,
+				D8995C2C1C789546000A219A /* NSArray */,
+				D89A5B731BC26B7A0029AE93 /* NSData */,
+				D8251EC91C9E0968005C1C39 /* NSDate */,
+				E34FBF111B8ABA7200043CCD /* NSString */,
+				D83943681BE0B9C000EA65BC /* UIDevice */,
+				E34FBF141B8ABA7200043CCD /* UIImage */,
+				D8B775A71CA13261009C6854 /* UIViewController */,
+				D8B775B11CA136BB009C6854 /* NSLayoutConstraint */,
+				E34FBEF51B8AB56F00043CCD /* Supporting Files */,
 			);
 			path = EliteFramework;
+			sourceTree = "<group>";
+		};
+		E34FBEF51B8AB56F00043CCD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E34FBEF61B8AB56F00043CCD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E34FBF111B8ABA7200043CCD /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				E34FBF121B8ABA7200043CCD /* EliteString.h */,
+				E34FBF131B8ABA7200043CCD /* EliteString.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		E34FBF141B8ABA7200043CCD /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				E34FBF151B8ABA7200043CCD /* EliteImage.h */,
+				E34FBF161B8ABA7200043CCD /* EliteImage.m */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		E3F3AEC61BFB1A37009B35CC /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				E3F3AEC71BFB1A37009B35CC /* EliteMath.h */,
+				E3F3AEC81BFB1A37009B35CC /* EliteMath.m */,
+			);
+			path = Math;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		D8E9DC7E1C23015F00764801 /* Headers */ = {
+		E34FBEEF1B8AB56F00043CCD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E34FBEF81B8AB56F00043CCD /* EliteFramework.h in Headers */,
+				D8995C2F1C789557000A219A /* EliteArray.h in Headers */,
+				D83757D91BDA0C8D0076B94B /* EliteConfig.h in Headers */,
+				D89A5B761BC26B7A0029AE93 /* EliteData.h in Headers */,
+				D8B775AA1CA13261009C6854 /* EliteViewController.h in Headers */,
+				D8B775AF1CA13268009C6854 /* EliteColor.h in Headers */,
+				D8251ECC1C9E0968005C1C39 /* EliteDate.h in Headers */,
+				D8B775A01CA131FB009C6854 /* EliteView.h in Headers */,
+				D8B775A51CA1325B009C6854 /* EliteLayer.h in Headers */,
+				D8B775B41CA136C7009C6854 /* EliteLayoutConstraint.h in Headers */,
+				D839436B1BE0B9C000EA65BC /* EliteDevice.h in Headers */,
+				E34FBF1E1B8ABA7200043CCD /* EliteImage.h in Headers */,
+				E3F3AEC91BFB1A37009B35CC /* EliteMath.h in Headers */,
+				E34FBF1C1B8ABA7200043CCD /* EliteString.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D8E9DC801C23015F00764801 /* EliteFramework */ = {
+		E34FBEF11B8AB56F00043CCD /* EliteFramework */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D8E9DC891C23015F00764801 /* Build configuration list for PBXNativeTarget "EliteFramework" */;
+			buildConfigurationList = E34FBF081B8AB57000043CCD /* Build configuration list for PBXNativeTarget "EliteFramework" */;
 			buildPhases = (
-				D8E9DC7C1C23015F00764801 /* Sources */,
-				D8E9DC7D1C23015F00764801 /* Frameworks */,
-				D8E9DC7E1C23015F00764801 /* Headers */,
-				D8E9DC7F1C23015F00764801 /* Resources */,
+				E34FBEED1B8AB56F00043CCD /* Sources */,
+				E34FBEEE1B8AB56F00043CCD /* Frameworks */,
+				E34FBEEF1B8AB56F00043CCD /* Headers */,
+				E34FBEF01B8AB56F00043CCD /* Resources */,
 			);
 			buildRules = (
 			);
@@ -132,33 +298,27 @@
 			);
 			name = EliteFramework;
 			productName = EliteFramework;
-			productReference = D8E9DC811C23015F00764801 /* EliteFramework.framework */;
+			productReference = E34FBEF21B8AB56F00043CCD /* EliteFramework.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D8E9DC781C23015F00764801 /* Project object */ = {
+		E34FBEE91B8AB56F00043CCD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Lifelong-Study";
 				TargetAttributes = {
-					D87C9D901D053F2B00EFBA8F = {
-						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0800;
+					E34FBEF11B8AB56F00043CCD = {
+						CreatedOnToolsVersion = 6.4;
 					};
-					D8E9DC801C23015F00764801 = {
-						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 0900;
-					};
-					D8E9DC931C23055B00764801 = {
-						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 0800;
+					E34FBF221B8ABAD900043CCD = {
+						CreatedOnToolsVersion = 6.4;
 					};
 				};
 			};
-			buildConfigurationList = D8E9DC7B1C23015F00764801 /* Build configuration list for PBXProject "EliteFramework" */;
+			buildConfigurationList = E34FBEEC1B8AB56F00043CCD /* Build configuration list for PBXProject "EliteFramework" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -166,20 +326,19 @@
 				en,
 				Base,
 			);
-			mainGroup = D8E9DC771C23015F00764801;
-			productRefGroup = D8E9DC821C23015F00764801 /* Products */;
+			mainGroup = E34FBEE81B8AB56F00043CCD;
+			productRefGroup = E34FBEF31B8AB56F00043CCD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D8E9DC801C23015F00764801 /* EliteFramework */,
-				D8E9DC931C23055B00764801 /* Target-Simulator */,
-				D87C9D901D053F2B00EFBA8F /* Target-Release */,
+				E34FBEF11B8AB56F00043CCD /* EliteFramework */,
+				E34FBF221B8ABAD900043CCD /* Target */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D8E9DC7F1C23015F00764801 /* Resources */ = {
+		E34FBEF01B8AB56F00043CCD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -189,7 +348,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		D87C9D941D053F4300EFBA8F /* ShellScript */ = {
+		E34FBF261B8ABADF00043CCD /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -200,69 +359,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#!/bin/sh\n\nFRAMEWORK_NAME=${PROJECT_NAME}.framework\n\n# Install dir will be the final output to the framework.\n# The following line create it in the root folder of the current project.\nINSTALL_DIR=${SRCROOT}/Products\n\n# make sure the output directory exists\nmkdir -p \"${INSTALL_DIR}\"\n\n# Step 1. Build Device and Simulator versions\nxcodebuild -target \"${PROJECT_NAME}\" ONLY_ACTIVE_ARCH=NO -configuration \"Release\" -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n\n# Step 2. Copy the framework structure (from iphoneos build) to the products folder\ncp -R \"${BUILD_DIR}/Release-iphoneos/${FRAMEWORK_NAME}\" \"${INSTALL_DIR}\"\n\n# Step 3. Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${INSTALL_DIR}/${FRAMEWORK_NAME}/${PROJECT_NAME}\" \"${BUILD_DIR}/Release-iphoneos/${FRAMEWORK_NAME}/${PROJECT_NAME}\"\n\n# Step 4. Convenience step to remove the build temp folder\nrm -r \"build\"\n\n# Step 5. Convenience step to open the products directory in Finder\nopen \"${INSTALL_DIR}/${FRAMEWORK_NAME}\"";
-		};
-		D8E9DC971C23056000764801 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "#!/bin/sh\n\nFRAMEWORK_NAME=${PROJECT_NAME}.framework\n\n# Install dir will be the final output to the framework.\n# The following line create it in the root folder of the current project.\nINSTALL_DIR=${SRCROOT}/Products\n\n# make sure the output directory exists\nmkdir -p \"${INSTALL_DIR}\"\n\n# Step 1. Build Device and Simulator versions\nxcodebuild -target \"${PROJECT_NAME}\" ONLY_ACTIVE_ARCH=NO -configuration \"Release\" -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\nxcodebuild -target \"${PROJECT_NAME}\" -configuration \"Release\" -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n\n# Step 2. Copy the framework structure (from iphoneos build) to the products folder\ncp -R \"${BUILD_DIR}/Release-iphoneos/${FRAMEWORK_NAME}\" \"${INSTALL_DIR}\"\n\n# Step 3. Copy Swift modules from iphonesimulator build to the copied framework directory\nSIMULATOR_SWIFT_MODULES_DIR=\"${BUILD_DIR}/Release-iphonesimulator/${FRAMEWORK_NAME}/Modules/${PROJECT_NAME}.swiftmodule/.\"\ncp -R \"${SIMULATOR_SWIFT_MODULES_DIR}\" \"${INSTALL_DIR}/${FRAMEWORK_NAME}/Modules/${PROJECT_NAME}.swiftmodule\"\n\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${INSTALL_DIR}/${FRAMEWORK_NAME}/${PROJECT_NAME}\" \"${BUILD_DIR}/Release-iphonesimulator/${FRAMEWORK_NAME}/${PROJECT_NAME}\" \"${BUILD_DIR}/Release-iphoneos/${FRAMEWORK_NAME}/${PROJECT_NAME}\"\n\n# Step 5. Convenience step to remove the build temp folder\nrm -r \"build\"\n\n# Step 6. Convenience step to open the products directory in Finder\nopen \"${INSTALL_DIR}/${FRAMEWORK_NAME}\"";
+			shellScript = "# Sets the target folders and the final framework product.\n# 如果工程名称和Framework的Target名称不一样的话，要自定义FMKNAME\n# 例如: FMK_NAME = \"MyFramework\"\nFMK_NAME=${PROJECT_NAME}\n\n# Install dir will be the final output to the framework.\n# The following line create it in the root folder of the current project.\nINSTALL_DIR=${SRCROOT}/Products/${FMK_NAME}.framework\n\n# Working dir will be deleted after the framework creation.\nWRK_DIR=build\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.framework\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator/${FMK_NAME}.framework\n\n# -configuration ${CONFIGURATION}\n# Clean and Building both architectures.\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphoneos clean build\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphonesimulator clean build\n\n# Cleaning the oldest.\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\n\nmkdir -p \"${INSTALL_DIR}\"\n\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n\n# Uses the Lipo Tool to merge both binary files (i386 + armv6/armv7) into one Universal final product.\nlipo -create \"${DEVICE_DIR}/${FMK_NAME}\" \"${SIMULATOR_DIR}/${FMK_NAME}\" -output \"${INSTALL_DIR}/${FMK_NAME}\"\n\nrm -r \"${WRK_DIR}\"\n\n open \"${INSTALL_DIR}\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D8E9DC7C1C23015F00764801 /* Sources */ = {
+		E34FBEED1B8AB56F00043CCD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D853307A1D9B410F006C965C /* EliteView.swift in Sources */,
-				10D1135121BA3F52004E6591 /* XIBView.swift in Sources */,
-				D87963CB1C85D75A00F8ADB7 /* EliteAttributedString.swift in Sources */,
-				D867BF6C1C70BAB40023B6E2 /* EliteColor.swift in Sources */,
-				D88FA4981C86315C00C02B3E /* EliteDate.swift in Sources */,
-				D81B56B31CF8C0020044E6DF /* EliteLayoutConstraint.swift in Sources */,
-				D83C26291C712036000FC007 /* EliteString.swift in Sources */,
-				D891AFA51C90290E004BC0AA /* EliteImage.swift in Sources */,
-				D812AA7B1C734C9D003A6C28 /* EliteViewController.swift in Sources */,
-				D867BF6D1C70BAB40023B6E2 /* EliteLayer.swift in Sources */,
+				E34FBF1F1B8ABA7200043CCD /* EliteImage.m in Sources */,
+				D8B775B01CA13268009C6854 /* EliteColor.m in Sources */,
+				E3F3AECA1BFB1A37009B35CC /* EliteMath.m in Sources */,
+				D839436C1BE0B9C000EA65BC /* EliteDevice.m in Sources */,
+				D8B775A61CA1325B009C6854 /* EliteLayer.m in Sources */,
+				E34FBF1D1B8ABA7200043CCD /* EliteString.m in Sources */,
+				D8B775A11CA131FB009C6854 /* EliteView.m in Sources */,
+				D89A5B771BC26B7A0029AE93 /* EliteData.m in Sources */,
+				D8B775AB1CA13261009C6854 /* EliteViewController.m in Sources */,
+				D8B775B51CA136C7009C6854 /* EliteLayoutConstraint.m in Sources */,
+				D8995C301C789557000A219A /* EliteArray.m in Sources */,
+				D8251ECD1C9E0968005C1C39 /* EliteDate.m in Sources */,
+				D83757DA1BDA0C8D0076B94B /* EliteConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		D87C9D921D053F2B00EFBA8F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-			};
-			name = Debug;
-		};
-		D87C9D931D053F2B00EFBA8F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-			};
-			name = Release;
-		};
-		D8E9DC871C23015F00764801 /* Debug */ = {
+		E34FBF061B8AB57000043CCD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -285,7 +418,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -296,32 +429,32 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		D8E9DC881C23015F00764801 /* Release */ = {
+		E34FBF071B8AB57000043CCD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -355,12 +488,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -368,12 +498,10 @@
 			};
 			name = Release;
 		};
-		D8E9DC8A1C23015F00764801 /* Debug */ = {
+		E34FBF091B8AB57000043CCD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -381,20 +509,18 @@
 				INFOPLIST_FILE = EliteFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tw.com.songhua.Framework;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.songhua.Elite.EliteFramework;
+				PRODUCT_NAME = EliteFramework;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		D8E9DC8B1C23015F00764801 /* Release */ = {
+		E34FBF0A1B8AB57000043CCD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -402,71 +528,59 @@
 				INFOPLIST_FILE = EliteFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tw.com.songhua.Framework;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.songhua.Elite.EliteFramework;
+				PRODUCT_NAME = EliteFramework;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
-		D8E9DC951C23055B00764801 /* Debug */ = {
+		E34FBF241B8ABAD900043CCD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
-		D8E9DC961C23055B00764801 /* Release */ = {
+		E34FBF251B8ABAD900043CCD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D87C9D911D053F2B00EFBA8F /* Build configuration list for PBXAggregateTarget "Target-Release" */ = {
+		E34FBEEC1B8AB56F00043CCD /* Build configuration list for PBXProject "EliteFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D87C9D921D053F2B00EFBA8F /* Debug */,
-				D87C9D931D053F2B00EFBA8F /* Release */,
+				E34FBF061B8AB57000043CCD /* Debug */,
+				E34FBF071B8AB57000043CCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D8E9DC7B1C23015F00764801 /* Build configuration list for PBXProject "EliteFramework" */ = {
+		E34FBF081B8AB57000043CCD /* Build configuration list for PBXNativeTarget "EliteFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D8E9DC871C23015F00764801 /* Debug */,
-				D8E9DC881C23015F00764801 /* Release */,
+				E34FBF091B8AB57000043CCD /* Debug */,
+				E34FBF0A1B8AB57000043CCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D8E9DC891C23015F00764801 /* Build configuration list for PBXNativeTarget "EliteFramework" */ = {
+		E34FBF231B8ABAD900043CCD /* Build configuration list for PBXAggregateTarget "Target" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D8E9DC8A1C23015F00764801 /* Debug */,
-				D8E9DC8B1C23015F00764801 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D8E9DC941C23055B00764801 /* Build configuration list for PBXAggregateTarget "Target-Simulator" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D8E9DC951C23055B00764801 /* Debug */,
-				D8E9DC961C23055B00764801 /* Release */,
+				E34FBF241B8ABAD900043CCD /* Debug */,
+				E34FBF251B8ABAD900043CCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D8E9DC781C23015F00764801 /* Project object */;
+	rootObject = E34FBEE91B8AB56F00043CCD /* Project object */;
 }
