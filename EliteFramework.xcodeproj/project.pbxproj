@@ -22,6 +22,7 @@
 		D841EA8D255705230000738B /* EliteImage.h in Headers */ = {isa = PBXBuildFile; fileRef = E34FBF151B8ABA7200043CCD /* EliteImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D841EA8E255705230000738B /* EliteViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D8B775A81CA13261009C6854 /* EliteViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D841EA8F255705230000738B /* EliteLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = D8B775B21CA136C7009C6854 /* EliteLayoutConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8995C301C789557000A219A /* EliteArray.m in Sources */ = {isa = PBXBuildFile; fileRef = D8995C2E1C789557000A219A /* EliteArray.m */; };
 		D89A5B771BC26B7A0029AE93 /* EliteData.m in Sources */ = {isa = PBXBuildFile; fileRef = D89A5B751BC26B7A0029AE93 /* EliteData.m */; };
 		D8B775A11CA131FB009C6854 /* EliteView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B7759F1CA131FB009C6854 /* EliteView.m */; };
 		D8B775A61CA1325B009C6854 /* EliteLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B775A41CA1325B009C6854 /* EliteLayer.m */; };
@@ -41,6 +42,8 @@
 		D83757D81BDA0C8D0076B94B /* EliteConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EliteConfig.m; sourceTree = "<group>"; };
 		D83943691BE0B9C000EA65BC /* EliteDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EliteDevice.h; sourceTree = "<group>"; };
 		D839436A1BE0B9C000EA65BC /* EliteDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EliteDevice.m; sourceTree = "<group>"; };
+		D8995C2D1C789557000A219A /* EliteArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EliteArray.h; sourceTree = "<group>"; };
+		D8995C2E1C789557000A219A /* EliteArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EliteArray.m; sourceTree = "<group>"; };
 		D89A5B741BC26B7A0029AE93 /* EliteData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EliteData.h; sourceTree = "<group>"; };
 		D89A5B751BC26B7A0029AE93 /* EliteData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EliteData.m; sourceTree = "<group>"; };
 		D8B7759E1CA131FB009C6854 /* EliteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EliteView.h; sourceTree = "<group>"; };
@@ -100,6 +103,15 @@
 				D839436A1BE0B9C000EA65BC /* EliteDevice.m */,
 			);
 			path = UIDevice;
+			sourceTree = "<group>";
+		};
+		D8995C2C1C789546000A219A /* NSArray */ = {
+			isa = PBXGroup;
+			children = (
+				D8995C2D1C789557000A219A /* EliteArray.h */,
+				D8995C2E1C789557000A219A /* EliteArray.m */,
+			);
+			path = NSArray;
 			sourceTree = "<group>";
 		};
 		D89A5B731BC26B7A0029AE93 /* NSData */ = {
@@ -181,6 +193,7 @@
 				D8B7759D1CA131FB009C6854 /* UIView */,
 				D8B775AC1CA13268009C6854 /* UIColor */,
 				E3F3AEC61BFB1A37009B35CC /* Math */,
+				D8995C2C1C789546000A219A /* NSArray */,
 				D89A5B731BC26B7A0029AE93 /* NSData */,
 				D8251EC91C9E0968005C1C39 /* NSDate */,
 				E34FBF111B8ABA7200043CCD /* NSString */,
@@ -329,6 +342,7 @@
 				D89A5B771BC26B7A0029AE93 /* EliteData.m in Sources */,
 				D8B775AB1CA13261009C6854 /* EliteViewController.m in Sources */,
 				D8B775B51CA136C7009C6854 /* EliteLayoutConstraint.m in Sources */,
+				D8995C301C789557000A219A /* EliteArray.m in Sources */,
 				D8251ECD1C9E0968005C1C39 /* EliteDate.m in Sources */,
 				D83757DA1BDA0C8D0076B94B /* EliteConfig.m in Sources */,
 			);
