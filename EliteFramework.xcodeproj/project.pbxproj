@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D8090AEE25570BB900697231 /* EliteArray.h in Headers */ = {isa = PBXBuildFile; fileRef = D8995C2D1C789557000A219A /* EliteArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D8251ECD1C9E0968005C1C39 /* EliteDate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8251ECB1C9E0968005C1C39 /* EliteDate.m */; };
 		D83757DA1BDA0C8D0076B94B /* EliteConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D83757D81BDA0C8D0076B94B /* EliteConfig.m */; };
 		D839436C1BE0B9C000EA65BC /* EliteDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = D839436A1BE0B9C000EA65BC /* EliteDevice.m */; };
@@ -249,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E34FBEF81B8AB56F00043CCD /* EliteFramework.h in Headers */,
+				D8090AEE25570BB900697231 /* EliteArray.h in Headers */,
 				D841EA83255705230000738B /* EliteLayer.h in Headers */,
 				D841EA84255705230000738B /* EliteConfig.h in Headers */,
 				D841EA85255705230000738B /* EliteView.h in Headers */,

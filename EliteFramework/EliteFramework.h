@@ -15,6 +15,7 @@ FOUNDATION_EXPORT double EliteLibraryVersionNumber;
 FOUNDATION_EXPORT const unsigned char EliteLibraryVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <EliteFramework/PublicHeader.h>
+#import <EliteFramework/EliteArray.h>
 #import <EliteFramework/EliteView.h>
 #import <EliteFramework/EliteColor.h>
 #import <EliteFramework/EliteConfig.h>
